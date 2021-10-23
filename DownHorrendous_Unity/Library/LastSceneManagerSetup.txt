@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< refs/remotes/origin/WesBranch
 - path: Assets/Wesley Folder/Scenes/WesScene.unity
+=======
+- path: Assets/John Folder/JohnScene.unity
+>>>>>>> JohnScene + RCSG + Blockout
   isLoaded: 1
   isActive: 1
   isSubScene: 0
