@@ -8,22 +8,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 537
-    y: 477
-    width: 677
-    height: 573
-  m_ShowMode: 0
-  m_Title: Project Settings
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 300, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
+  m_ShowMode: 4
+  m_Title: Scene
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 542}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -33,54 +33,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PixelRect:
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 3}
+  m_Position:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
     x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 53
-    width: 1680
-    height: 997
-  m_ShowMode: 4
-  m_Title: Hierarchy
-  m_RootView: {fileID: 9}
-=======
-    y: 42.666668
-=======
-    y: 50
->>>>>>> Level Blockout in John Scene
-    width: 1706.6667
-    height: 877.3334
-  m_ShowMode: 4
-  m_Title: Scene
-  m_RootView: {fileID: 8}
->>>>>>> JohnScene + RCSG + Blockout
-  m_MinSize: {x: 875, y: 542}
-=======
-    x: 7.3333335
-    y: 50
-    width: 1692
-    height: 862.6667
-=======
-    x: 0
-    y: 43
+    y: 30
     width: 1920
-    height: 997
->>>>>>> Made DonoScene
-  m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 8}
-<<<<<<< refs/remotes/origin/WesBranch
-  m_MinSize: {x: 875, y: 300}
->>>>>>> Revised Blockout
-  m_MaxSize: {x: 10000, y: 10000}
-<<<<<<< refs/remotes/origin/WesBranch
-  m_Maximized: 1
+    height: 947
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 83
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,22 +57,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectSettingsWindow
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 1531
     y: 0
-    width: 677
-    height: 573
-  m_MinSize: {x: 300, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 15}
+    width: 389
+    height: 947
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
@@ -115,229 +83,25 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 677
-    height: 573
-  m_MinSize: {x: 300, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 7983
---- !u!114 &5
-=======
-  m_Maximized: 0
-=======
-  m_MinSize: {x: 875, y: 542}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
->>>>>>> Made DonoScene
---- !u!114 &2
->>>>>>> Level Blockout in John Scene
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneHierarchyWindow
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 1263
-    y: 0
-    width: 417
-    height: 676
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-=======
     x: 0
     y: 0
-    width: 347
-    height: 316
+    width: 379
+    height: 573
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
-  m_Panes:
-  - {fileID: 21}
->>>>>>> JohnScene + RCSG + Blockout
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-<<<<<<< refs/remotes/origin/WesBranch
-  - {fileID: 12}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 1680
-    height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 12002, y: 14042}
-  vertical: 0
-  controlID: 24
---- !u!114 &7
-=======
-  - {fileID: 2}
-  - {fileID: 7}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 631
-    width: 1920
-    height: 316
-  m_MinSize: {x: 432, y: 271}
-  m_MaxSize: {x: 14002, y: 10021}
-  vertical: 0
-  controlID: 129
---- !u!114 &4
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 764
-    y: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    width: 433
-    height: 676
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
-    width: 738.6667
-    height: 556
-=======
-    width: 748.6667
-    height: 552
->>>>>>> Level Blockout in John Scene
-=======
-    width: 742
-    height: 542
->>>>>>> Revised Blockout
-=======
-    width: 842
-    height: 631
->>>>>>> Made DonoScene
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
->>>>>>> JohnScene + RCSG + Blockout
-  m_ActualView: {fileID: 23}
-  m_Panes:
-  - {fileID: 23}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &8
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< refs/remotes/origin/WesBranch
-  m_Name: ProjectBrowser
-=======
-  m_Name: InspectorWindow
->>>>>>> JohnScene + RCSG + Blockout
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1606
-    y: 0
-    width: 314
-    height: 631
-  m_MinSize: {x: 276, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 11}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 676
-    width: 1680
-    height: 271
-  m_MinSize: {x: 230, y: 271}
-  m_MaxSize: {x: 10000, y: 10021}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 26}
-  - {fileID: 20}
-  - {fileID: 18}
-  - {fileID: 22}
-  - {fileID: 16}
-  m_Selected: 3
-  m_LastSelected: 0
---- !u!114 &9
-=======
-    y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
-  vertical: 0
-  controlID: 74
---- !u!114 &7
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,28 +111,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 347
-    y: 0
-    width: 1573
-    height: 316
+    x: 0
+    y: 573
+    width: 1531
+    height: 374
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 24}
+  - {fileID: 13}
   - {fileID: 18}
-  - {fileID: 16}
-  - {fileID: 20}
-  - {fileID: 14}
-  m_Selected: 3
-  m_LastSelected: 4
---- !u!114 &8
->>>>>>> JohnScene + RCSG + Blockout
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,55 +141,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-<<<<<<< refs/remotes/origin/WesBranch
-  - {fileID: 10}
-  - {fileID: 6}
-  - {fileID: 11}
-=======
-  - {fileID: 9}
-  - {fileID: 6}
-  - {fileID: 10}
->>>>>>> JohnScene + RCSG + Blockout
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    width: 1680
-    height: 997
-  m_MinSize: {x: 875, y: 300}
-=======
-    width: 1707
-    height: 877
-=======
-    width: 1706.6667
-    height: 877.3334
->>>>>>> Level Blockout in John Scene
-  m_MinSize: {x: 875, y: 542}
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    width: 1692
-    height: 863
-  m_MinSize: {x: 875, y: 300}
->>>>>>> Revised Blockout
-=======
     width: 1920
     height: 997
   m_MinSize: {x: 875, y: 542}
->>>>>>> Made DonoScene
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &10
-=======
---- !u!114 &9
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,38 +173,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    width: 1680
-=======
-    width: 1707
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    width: 1706.6667
->>>>>>> Level Blockout in John Scene
-=======
-    width: 1692
->>>>>>> Revised Blockout
-=======
     width: 1920
->>>>>>> Made DonoScene
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-<<<<<<< refs/remotes/origin/WesBranch
-  - {fileID: 27}
-  m_MainToolbar: {fileID: 27}
+  - {fileID: 19}
+  m_MainToolbar: {fileID: 19}
   m_LastLoadedLayoutName: 
---- !u!114 &11
-=======
-  - {fileID: 25}
-  m_MainToolbar: {fileID: 25}
-  m_LastLoadedLayoutName: 
---- !u!114 &10
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,36 +197,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 977
-    width: 1680
-    height: 20
-  m_MinSize: {x: 0, y: 0}
-  m_MaxSize: {x: 0, y: 0}
---- !u!114 &12
-=======
-    y: 857
-    width: 1707
-=======
-    y: 857.3334
-    width: 1706.6667
->>>>>>> Level Blockout in John Scene
-=======
-    y: 843
-    width: 1692
->>>>>>> Revised Blockout
-=======
     y: 977
     width: 1920
->>>>>>> Made DonoScene
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &11
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -535,105 +215,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-<<<<<<< refs/remotes/origin/WesBranch
-  - {fileID: 13}
-  - {fileID: 8}
-=======
-  - {fileID: 12}
-  - {fileID: 3}
->>>>>>> JohnScene + RCSG + Blockout
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    width: 1680
-    height: 947
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 12002, y: 14042}
-  vertical: 1
-  controlID: 25
---- !u!114 &13
-=======
-    width: 1707
-    height: 827
-=======
-    width: 1706.6667
-    height: 827.3334
->>>>>>> Level Blockout in John Scene
-=======
-    width: 1692
-    height: 813
->>>>>>> Revised Blockout
-=======
-    width: 1920
-    height: 947
->>>>>>> Made DonoScene
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
-  vertical: 1
-  controlID: 75
---- !u!114 &12
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-<<<<<<< refs/remotes/origin/WesBranch
-  - {fileID: 7}
-  - {fileID: 14}
-=======
-  - {fileID: 13}
-  - {fileID: 4}
->>>>>>> JohnScene + RCSG + Blockout
+  - {fileID: 10}
   - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    width: 1680
-    height: 676
-  m_MinSize: {x: 677, y: 221}
-  m_MaxSize: {x: 12002, y: 4021}
+    width: 1531
+    height: 947
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 108
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1531
+    height: 573
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 26
---- !u!114 &14
-=======
-    width: 1707
-    height: 556
-=======
-    width: 1706.6667
-    height: 552
->>>>>>> Level Blockout in John Scene
-=======
-    width: 1692
-    height: 542
->>>>>>> Revised Blockout
-=======
-    width: 1920
-    height: 631
->>>>>>> Made DonoScene
-  m_MinSize: {x: 679, y: 221}
-  m_MaxSize: {x: 12004, y: 4021}
-  vertical: 0
-  controlID: 76
---- !u!114 &13
->>>>>>> JohnScene + RCSG + Blockout
+  controlID: 109
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -643,490 +262,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 433
+    x: 379
     y: 0
-    width: 830
-    height: 676
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 25}
+    width: 1152
+    height: 573
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 21}
-  - {fileID: 25}
-  - {fileID: 24}
-  - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 2
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Project Settings
-    m_Image: {fileID: 866346219090771560, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 537
-    y: 477
-    width: 677
-    height: 552
-  m_ViewDataDictionary: {fileID: 0}
-  m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 0}
-  m_Scope: 1
-  m_SplitterFlex: 0.2
---- !u!114 &16
-=======
-    x: 0
-    y: 0
-    width: 764
-    height: 631
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 19}
-  - {fileID: 22}
+  - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
+  - {fileID: 12}
+  m_Selected: 0
   m_LastSelected: 1
---- !u!114 &14
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a29be786b76fd554dbbab1c327cf82d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Wwise Picker
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 759
-    width: 1680
-    height: 250
-=======
-    y: 662.6667
-    width: 1706
-    height: 216
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    x: 347
-    y: 704
-    width: 1572
-    height: 295
->>>>>>> Made DonoScene
-  m_ViewDataDictionary: {fileID: 0}
-  m_treeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &17
-=======
---- !u!114 &15
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 1263
-    y: 83
-    width: 416
-    height: 655
-=======
-    x: 1430.6667
-    y: 72.66667
-    width: 274.33337
-    height: 535
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    x: 1428
-    y: 80
-    width: 277.66675
-    height: 531
->>>>>>> Level Blockout in John Scene
-=======
-    x: 1422.6667
-    y: 80
-    width: 276
-    height: 521
->>>>>>> Revised Blockout
-=======
-    x: 1606
-    y: 73
-    width: 313
-    height: 610
->>>>>>> Made DonoScene
-  m_ViewDataDictionary: {fileID: 0}
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 151
-    m_ControlHash: 1412526313
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &18
-=======
---- !u!114 &16
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 759
-    width: 1680
-    height: 250
-  m_ViewDataDictionary: {fileID: 0}
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: 16272
---- !u!114 &19
-=======
-    y: 662.6667
-    width: 1706
-    height: 216
-  m_ViewDataDictionary: {fileID: 0}
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: -2558
---- !u!114 &17
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 335
-    y: 73
-    width: 1112
-    height: 655
-  m_ViewDataDictionary: {fileID: 0}
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: 5247724317919565864, guid: 6db3c460ce0e57c468c2a46ea8232537, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6db3c460ce0e57c468c2a46ea8232537, type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: 5247724317919565864, guid: 6db3c460ce0e57c468c2a46ea8232537, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 1
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &20
-=======
---- !u!114 &18
->>>>>>> JohnScene + RCSG + Blockout
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12373, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Audio Mixer
-    m_Image: {fileID: -3283902137440876849, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 759
-    width: 1680
-    height: 250
-  m_ViewDataDictionary: {fileID: 0}
-  m_MixersTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 16766
-    m_ExpandedIDs: 12eb343c
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-<<<<<<< refs/remotes/origin/WesBranch
-      m_ClientGUIView: {fileID: 8}
-=======
-      m_ClientGUIView: {fileID: 7}
->>>>>>> JohnScene + RCSG + Blockout
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_LayoutStripsOnTop:
-    m_VerticalSplitter:
-      ID: 0
-      splitterInitialOffset: 0
-      currentActiveSplitter: -1
-      realSizes:
-      - 65
-      - 35
-      relativeSizes:
-      - 0.65
-      - 0.35000002
-      minSizes:
-      - 85
-      - 105
-      maxSizes:
-      - 0
-      - 0
-      lastTotalSize: 0
-      splitSize: 6
-      xOffset: 0
-      m_Version: 1
-      oldRealSizes: 4100000023000000
-      oldMinSizes: 5500000069000000
-      oldMaxSizes: 0000000000000000
-      oldSplitSize: 6
-    m_HorizontalSplitter:
-      ID: 0
-      splitterInitialOffset: 0
-      currentActiveSplitter: -1
-      realSizes:
-      - 60
-      - 60
-      - 60
-      - 60
-      relativeSizes:
-      - 0.25
-      - 0.25
-      - 0.25
-      - 0.25
-      minSizes:
-      - 85
-      - 85
-      - 85
-      - 85
-      maxSizes:
-      - 0
-      - 0
-      - 0
-      - 0
-      lastTotalSize: 0
-      splitSize: 6
-      xOffset: 0
-      m_Version: 1
-      oldRealSizes: 3c0000003c0000003c0000003c000000
-      oldMinSizes: 55000000550000005500000055000000
-      oldMaxSizes: 00000000000000000000000000000000
-      oldSplitSize: 6
-  m_LayoutStripsOnRight:
-    m_VerticalSplitter:
-      ID: 0
-      splitterInitialOffset: 0
-      currentActiveSplitter: -1
-      realSizes:
-      - 60
-      - 60
-      - 60
-      - 60
-      relativeSizes:
-      - 0.25
-      - 0.25
-      - 0.25
-      - 0.25
-      minSizes:
-      - 100
-      - 85
-      - 85
-      - 85
-      maxSizes:
-      - 0
-      - 0
-      - 0
-      - 0
-      lastTotalSize: 0
-      splitSize: 6
-      xOffset: 0
-      m_Version: 1
-      oldRealSizes: 3c0000003c0000003c0000003c000000
-      oldMinSizes: 64000000550000005500000055000000
-      oldMaxSizes: 00000000000000000000000000000000
-      oldSplitSize: 6
-    m_HorizontalSplitter:
-      ID: 106
-      splitterInitialOffset: 573
-      currentActiveSplitter: -1
-      realSizes:
-      - 504
-      - 1176
-      relativeSizes:
-      - 0.3
-      - 0.7
-      minSizes:
-      - 160
-      - 160
-      maxSizes:
-      - 0
-      - 0
-      lastTotalSize: 1680
-      splitSize: 6
-      xOffset: 0
-      m_Version: 1
-      oldRealSizes: 4002000040050000
-      oldMinSizes: a0000000a0000000
-      oldMaxSizes: 0000000000000000
-      oldSplitSize: 6
-  m_SectionOrder: 00000000030000000100000002000000
-  m_LayoutMode: 1
-  m_SortGroupsAlphabetically: 0
-  m_ShowReferencedBuses: 1
-  m_ShowBusConnections: 0
-  m_ShowBusConnectionsOfSelection: 0
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &21
-=======
---- !u!114 &19
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1142,20 +296,16 @@ MonoBehaviour:
   m_MaxSize: {x: 2048, y: 2048}
   m_TitleContent:
     m_Text: Asset Store
-    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 432
-    y: 83
-    width: 828
-    height: 655
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_ViewDataDictionary: {fileID: 0}
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &22
-=======
---- !u!114 &20
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1171,41 +321,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
     x: 0
-    y: 759
-    width: 1680
-=======
-    x: 569.3334
-    y: 628.6667
-    width: 1136
->>>>>>> JohnScene + RCSG + Blockout
-    height: 250
-=======
-    x: 309.33334
-    y: 632
-    width: 1396.3334
-    height: 254.33337
->>>>>>> Level Blockout in John Scene
-=======
-    x: 313.33334
-    y: 622
-    width: 1385
-    height: 250
->>>>>>> Revised Blockout
-=======
-    x: 347
-    y: 704
-    width: 1572
-    height: 295
->>>>>>> Made DonoScene
+    y: 646
+    width: 1530
+    height: 353
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1220,73 +343,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    - Assets/Wesley Folder
-=======
-    - Assets/John Folder
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    - Assets/John Folder/Materials
->>>>>>> Level Blockout in John Scene
-=======
     - Assets/Donovan Folder
->>>>>>> Made DonoScene
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 80
+  m_StartGridSize: 64
   m_LastFolders:
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-  - Assets/Wesley Folder
-  m_LastFoldersGridSize: 80
-  m_LastProjectPath: /Users/wesleydavies/Desktop/College/2021b Fall/Major Studio/DownHorrendousPrototype/DownHorrendous_Unity
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: fa3f0000
-    m_LastClickedID: 16378
-    m_ExpandedIDs: 00000000fa3f0000fc3f0000fe3f000000400000024000000440000006400000084000000a4000000c4000000e400000104000001240000014400000164000001e40000000ca9a3b
-=======
-  - Assets/John Folder
-=======
-  - Assets/John Folder/Materials
->>>>>>> Level Blockout in John Scene
-=======
   - Assets/Donovan Folder
->>>>>>> Made DonoScene
-  m_LastFoldersGridSize: 80
+  m_LastFoldersGridSize: -1
   m_LastProjectPath: G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    m_SelectedIDs: 66420000
-    m_LastClickedID: 16998
-    m_ExpandedIDs: 00000000f841000000ca9a3b
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    m_SelectedIDs: ae430000
-    m_LastClickedID: 17326
-    m_ExpandedIDs: 00000000fe420000a043000000ca9a3b
->>>>>>> Level Blockout in John Scene
-=======
-    m_SelectedIDs: f8430000
-    m_LastClickedID: 17400
-    m_ExpandedIDs: 000000007c430000ea43000000ca9a3b
->>>>>>> Revised Blockout
-=======
-    m_SelectedIDs: 34490000
-    m_LastClickedID: 18740
-    m_ExpandedIDs: 000000002c49000000ca9a3b
->>>>>>> Made DonoScene
+    m_SelectedIDs: 8e470000
+    m_LastClickedID: 18318
+    m_ExpandedIDs: 000000006c4700006e47000070470000724700007447000076470000784700007a4700007c4700007e47000080470000824700008447000086470000884700008c47000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1302,11 +374,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-<<<<<<< refs/remotes/origin/WesBranch
-      m_ClientGUIView: {fileID: 8}
-=======
-      m_ClientGUIView: {fileID: 7}
->>>>>>> JohnScene + RCSG + Blockout
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1318,23 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    m_ExpandedIDs: 00000000fa3f0000fc3f0000fe3f000000400000024000000440000006400000084000000a4000000c4000000e40000010400000124000001440000016400000
-=======
-    m_ExpandedIDs: 00000000f8410000
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    m_ExpandedIDs: 00000000fe420000
->>>>>>> Level Blockout in John Scene
-=======
-    m_ExpandedIDs: 000000007c430000
->>>>>>> Revised Blockout
-=======
-    m_ExpandedIDs: 000000002c490000
->>>>>>> Made DonoScene
+    m_ExpandedIDs: 000000006c4700006e47000070470000724700007447000076470000784700007a4700007c4700007e4700008047000082470000844700008647000088470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1362,7 +414,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000f633000046310000582f0000be2d0000ca7a0000c2a40000d22f000014a6000000ac0000d63a0000c85400007e59000022460000146300006a6d0000245000003a4a0000424a0000c83e0000ee780000aee40100163c0300da7f000090420000be84020016420000f0540000fa85000000000000
+    m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1378,19 +430,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
       m_ClientGUIView: {fileID: 0}
-=======
-      m_ClientGUIView: {fileID: 7}
->>>>>>> JohnScene + RCSG + Blockout
-=======
-      m_ClientGUIView: {fileID: 2}
->>>>>>> Revised Blockout
-=======
-      m_ClientGUIView: {fileID: 7}
->>>>>>> Made DonoScene
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1399,14 +439,47 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 80
+    m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 164
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &23
-=======
---- !u!114 &21
->>>>>>> JohnScene + RCSG + Blockout
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1531
+    y: 73
+    width: 388
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1422,68 +495,21 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
     x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 83
-    width: 432
-    height: 655
-=======
-    y: 628.6667
-    width: 568
-    height: 250
->>>>>>> JohnScene + RCSG + Blockout
+    y: 73
+    width: 378
+    height: 552
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< refs/remotes/origin/WesBranch
-      m_SelectedIDs: f888ffff
-      m_LastClickedID: -30472
-      m_ExpandedIDs: 52fbffff
-=======
-      m_SelectedIDs: 
+      m_SelectedIDs: 3c4a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 52fbffff40410000
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    y: 632
-    width: 308.33334
-    height: 254.33337
-=======
-    x: 7.3333335
-    y: 622
-    width: 305
-    height: 250
->>>>>>> Revised Blockout
-=======
-    x: 0
-    y: 704
-    width: 346
-    height: 295
->>>>>>> Made DonoScene
-  m_ViewDataDictionary: {fileID: 0}
-  m_SceneHierarchy:
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-      m_ExpandedIDs: acf0ffff52fbffff40410000
->>>>>>> Level Blockout in John Scene
-=======
-      m_ExpandedIDs: 52fbffff46410000
->>>>>>> Revised Blockout
-=======
-      m_ExpandedIDs: 38f3ffff26f6ffff
->>>>>>> Made DonoScene
+      m_ExpandedIDs: 60f1ffffa4f2ffff18f4ffffaef5ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1499,23 +525,15 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-<<<<<<< refs/remotes/origin/WesBranch
-        m_ClientGUIView: {fileID: 7}
-=======
         m_ClientGUIView: {fileID: 0}
->>>>>>> JohnScene + RCSG + Blockout
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-  m_WindowGUID: d2b637ccd8b8af64d9508a6feb6ffd4d
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &24
-=======
---- !u!114 &22
->>>>>>> JohnScene + RCSG + Blockout
+  m_WindowGUID: 83475213d50d38745aeead3e5e560418
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1531,44 +549,17 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 433
-    y: 83
-    width: 828
-    height: 655
-=======
-    x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 72.66667
-    width: 691
-    height: 535
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    y: 80
-    width: 678.3333
-    height: 531
->>>>>>> Level Blockout in John Scene
-=======
-    x: 7.3333335
-    y: 80
-    width: 672
-    height: 521
->>>>>>> Revised Blockout
-=======
-    x: 0
+    x: 379
     y: 73
-    width: 763
-    height: 610
->>>>>>> Made DonoScene
+    width: 1150
+    height: 552
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: c2a712e980019d3469dd3e34410b25c9
+  m_WindowGUID: f47afb1335cb90c49bef457e40f9153e
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
@@ -1578,27 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    m_Target: {x: -0.17421341, y: -0.030418396, z: 0.19498825}
+    m_Target: {x: -19.706041, y: 29.998253, z: 11.432976}
     speed: 2
-    m_Value: {x: -0.17421341, y: -0.030418396, z: 0.19498825}
-=======
-    m_Target: {x: -21.921753, y: 26.609798, z: 7.6373153}
-    speed: 2
-    m_Value: {x: -21.921753, y: 26.609798, z: 7.6373153}
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    m_Target: {x: -31.180737, y: 33.75763, z: 2.8998952}
-    speed: 2
-    m_Value: {x: -31.180737, y: 33.75763, z: 2.8998952}
->>>>>>> Level Blockout in John Scene
-=======
-    m_Target: {x: 1.4871912, y: 49.348713, z: -12.019313}
-    speed: 2
-    m_Value: {x: 1.4871912, y: 49.348713, z: -12.019313}
->>>>>>> Revised Blockout
+    m_Value: {x: -19.706041, y: 29.998253, z: 11.432976}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1640,36 +613,26 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
+      m_Size: {x: 0, y: 0}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.21153651, y: 0.33072764, z: -0.076445915, w: -0.91680235}
+    m_Target: {x: -0.2123762, y: 0.36654633, z: -0.086331, w: -0.90171313}
     speed: 2
-    m_Value: {x: -0.21153651, y: 0.33072764, z: -0.076445915, w: -0.91680235}
+    m_Value: {x: -0.21346697, y: 0.36911905, z: -0.08752154, w: -0.9002905}
   m_Size:
-<<<<<<< refs/remotes/origin/WesBranch
-    m_Target: 11.502537
+    m_Target: 19.04152
     speed: 2
-<<<<<<< refs/remotes/origin/WesBranch
-    m_Value: 11.502537
-=======
-    m_Value: 8.995227
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    m_Target: 7.2074656
-    speed: 2
-    m_Value: 7.2074656
->>>>>>> Level Blockout in John Scene
+    m_Value: 19.04152
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.7
-    m_SpeedNormalized: 0.35
-    m_SpeedMin: 0.01
+    m_Speed: 1
+    m_SpeedNormalized: 0.5
+    m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
     m_EasingDuration: 0.4
@@ -1679,18 +642,14 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &25
-=======
---- !u!114 &23
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1706,91 +665,49 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 433
-    y: 83
-    width: 828
-    height: 655
-=======
-    x: 692
-    y: 72.66667
-    width: 736.6667
-    height: 535
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    x: 679.3334
-    y: 80
-    width: 746.6667
-    height: 531
->>>>>>> Level Blockout in John Scene
-=======
-    x: 680.6667
-    y: 80
-    width: 740
-    height: 521
->>>>>>> Revised Blockout
-=======
-    x: 764
+    x: 379
     y: 73
-    width: 840
-    height: 610
->>>>>>> Made DonoScene
+    width: 1150
+    height: 552
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
-  m_ShowGizmos: 1
+  m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 828, y: 466}
+  m_TargetSize: {x: 1150, y: 531}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
   m_MaximizeOnPlay: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-    m_HBaseRangeMin: -207
-    m_HBaseRangeMax: 207
-    m_VBaseRangeMin: -116.5
-    m_VBaseRangeMax: 116.5
-=======
-    m_HBaseRangeMin: -853.3334
-    m_HBaseRangeMax: 853.3334
-    m_VBaseRangeMin: -480
-    m_VBaseRangeMax: 480
->>>>>>> JohnScene + RCSG + Blockout
-=======
-    m_HBaseRangeMin: -1280
-    m_HBaseRangeMax: 1280
-    m_VBaseRangeMin: -720
-    m_VBaseRangeMax: 720
->>>>>>> Made DonoScene
+    m_HBaseRangeMin: -575
+    m_HBaseRangeMax: 575
+    m_VBaseRangeMin: -265.5
+    m_VBaseRangeMax: 265.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
-    m_VSlider: 1
+    m_HSlider: 0
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1799,101 +716,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-      width: 828
-      height: 634
-    m_Scale: {x: 2, y: 2}
-    m_Translation: {x: 414, y: 317}
-=======
-      width: 736.6667
-      height: 514
-    m_Scale: {x: 0.43164062, y: 0.43164062}
-    m_Translation: {x: 368.33334, y: 257}
->>>>>>> JohnScene + RCSG + Blockout
-=======
-      width: 746.6667
-      height: 510
-    m_Scale: {x: 0.5044472, y: 0.5044472}
-    m_Translation: {x: 356.36743, y: 255}
->>>>>>> Level Blockout in John Scene
-=======
-      width: 740
-      height: 500
-    m_Scale: {x: 0.4712278, y: 0.4712278}
-    m_Translation: {x: 369.17435, y: 250}
->>>>>>> Revised Blockout
-=======
-      width: 840
-      height: 589
-    m_Scale: {x: 0.4712278, y: 0.4712278}
-    m_Translation: {x: 419.17435, y: 294.5}
->>>>>>> Made DonoScene
+      width: 1150
+      height: 531
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 575, y: 265.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-<<<<<<< refs/remotes/origin/WesBranch
-      x: -207
-      y: -158.5
-      width: 414
-      height: 317
+      x: -575
+      y: -265.5
+      width: 1150
+      height: 531
     m_MinimalGUI: 1
-  m_defaultScale: 2
-  m_LastWindowPixelSize: {x: 1656, y: 1310}
-=======
-      x: -853.3334
-      y: -595.4027
-      width: 1706.6667
-      height: 1190.8054
-    m_MinimalGUI: 1
-  m_defaultScale: 0.43164062
-  m_LastWindowPixelSize: {x: 1105, y: 802.5}
->>>>>>> JohnScene + RCSG + Blockout
-=======
-      x: -706.45135
-      y: -505.5038
-      width: 1480.1681
-      height: 1011.0076
-    m_MinimalGUI: 1
-  m_defaultScale: 0.4375
-  m_LastWindowPixelSize: {x: 1120, y: 796.5}
->>>>>>> Level Blockout in John Scene
-=======
-      x: -783.4307
-      y: -530.529
-      width: 1570.3657
-      height: 1061.058
-    m_MinimalGUI: 1
-  m_defaultScale: 0.43359372
-  m_LastWindowPixelSize: {x: 1110, y: 781.5}
->>>>>>> Revised Blockout
-=======
-      x: -889.53656
-      y: -624.96313
-      width: 1782.5774
-      height: 1249.9263
-    m_MinimalGUI: 1
-  m_defaultScale: 0.328125
-  m_LastWindowPixelSize: {x: 840, y: 610}
->>>>>>> Made DonoScene
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1150, y: 552}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
-<<<<<<< refs/remotes/origin/WesBranch
---- !u!114 &26
-=======
---- !u!114 &24
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1909,31 +754,16 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< refs/remotes/origin/WesBranch
-    x: 0
-<<<<<<< refs/remotes/origin/WesBranch
-    y: 759
-    width: 1680
-    height: 250
+    x: 8
+    y: 718
+    width: 1366
+    height: 308
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &27
-=======
-    y: 662.6667
-    width: 1706
-    height: 216
-=======
-    x: 309.33334
-    y: 628.6667
-    width: 1395.6666
-    height: 250
->>>>>>> Level Blockout in John Scene
-  m_ViewDataDictionary: {fileID: 0}
---- !u!114 &25
->>>>>>> JohnScene + RCSG + Blockout
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
