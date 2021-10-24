@@ -39,6 +39,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     x: 0
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
@@ -65,9 +66,16 @@ MonoBehaviour:
     y: 50
     width: 1692
     height: 862.6667
+=======
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
+>>>>>>> Made DonoScene
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 8}
+<<<<<<< refs/remotes/origin/WesBranch
   m_MinSize: {x: 875, y: 300}
 >>>>>>> Revised Blockout
   m_MaxSize: {x: 10000, y: 10000}
@@ -126,6 +134,11 @@ MonoBehaviour:
 --- !u!114 &5
 =======
   m_Maximized: 0
+=======
+  m_MinSize: {x: 875, y: 542}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+>>>>>>> Made DonoScene
 --- !u!114 &2
 >>>>>>> Level Blockout in John Scene
 MonoBehaviour:
@@ -155,8 +168,8 @@ MonoBehaviour:
 =======
     x: 0
     y: 0
-    width: 306
-    height: 271
+    width: 347
+    height: 316
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
@@ -197,13 +210,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 542
-    width: 1692
-    height: 271
+    y: 631
+    width: 1920
+    height: 316
   m_MinSize: {x: 432, y: 271}
   m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 123
+  controlID: 129
 --- !u!114 &4
 >>>>>>> JohnScene + RCSG + Blockout
 MonoBehaviour:
@@ -220,8 +233,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 673
+    x: 764
     y: 0
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
@@ -240,6 +254,10 @@ MonoBehaviour:
     width: 742
     height: 542
 >>>>>>> Revised Blockout
+=======
+    width: 842
+    height: 631
+>>>>>>> Made DonoScene
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> JohnScene + RCSG + Blockout
@@ -267,10 +285,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1415
+    x: 1606
     y: 0
-    width: 277
-    height: 542
+    width: 314
+    height: 631
   m_MinSize: {x: 276, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -313,12 +331,12 @@ MonoBehaviour:
 --- !u!114 &9
 =======
     y: 30
-    width: 1692
-    height: 813
+    width: 1920
+    height: 947
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 66
+  controlID: 74
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -334,10 +352,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 306
+    x: 347
     y: 0
-    width: 1386
-    height: 271
+    width: 1573
+    height: 316
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 20}
@@ -348,7 +366,7 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 14}
   m_Selected: 3
-  m_LastSelected: 0
+  m_LastSelected: 4
 --- !u!114 &8
 >>>>>>> JohnScene + RCSG + Blockout
 MonoBehaviour:
@@ -379,6 +397,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     width: 1680
     height: 997
   m_MinSize: {x: 875, y: 300}
@@ -396,6 +415,11 @@ MonoBehaviour:
     height: 863
   m_MinSize: {x: 875, y: 300}
 >>>>>>> Revised Blockout
+=======
+    width: 1920
+    height: 997
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> Made DonoScene
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -425,6 +449,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     width: 1680
 =======
     width: 1707
@@ -435,6 +460,9 @@ MonoBehaviour:
 =======
     width: 1692
 >>>>>>> Revised Blockout
+=======
+    width: 1920
+>>>>>>> Made DonoScene
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -468,6 +496,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     y: 977
     width: 1680
     height: 20
@@ -485,6 +514,10 @@ MonoBehaviour:
     y: 843
     width: 1692
 >>>>>>> Revised Blockout
+=======
+    y: 977
+    width: 1920
+>>>>>>> Made DonoScene
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -516,6 +549,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     width: 1680
     height: 947
   m_MinSize: {x: 677, y: 492}
@@ -534,10 +568,14 @@ MonoBehaviour:
     width: 1692
     height: 813
 >>>>>>> Revised Blockout
+=======
+    width: 1920
+    height: 947
+>>>>>>> Made DonoScene
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 67
+  controlID: 75
 --- !u!114 &12
 >>>>>>> JohnScene + RCSG + Blockout
 MonoBehaviour:
@@ -567,6 +605,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     width: 1680
     height: 676
   m_MinSize: {x: 677, y: 221}
@@ -585,10 +624,14 @@ MonoBehaviour:
     width: 1692
     height: 542
 >>>>>>> Revised Blockout
+=======
+    width: 1920
+    height: 631
+>>>>>>> Made DonoScene
   m_MinSize: {x: 679, y: 221}
   m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
-  controlID: 68
+  controlID: 76
 --- !u!114 &13
 >>>>>>> JohnScene + RCSG + Blockout
 MonoBehaviour:
@@ -653,8 +696,8 @@ MonoBehaviour:
 =======
     x: 0
     y: 0
-    width: 673
-    height: 542
+    width: 764
+    height: 631
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
@@ -685,6 +728,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< refs/remotes/origin/WesBranch
     x: 0
 <<<<<<< refs/remotes/origin/WesBranch
     y: 759
@@ -695,6 +739,12 @@ MonoBehaviour:
     width: 1706
     height: 216
 >>>>>>> JohnScene + RCSG + Blockout
+=======
+    x: 347
+    y: 704
+    width: 1572
+    height: 295
+>>>>>>> Made DonoScene
   m_ViewDataDictionary: {fileID: 0}
   m_treeViewState:
     scrollPos: {x: 0, y: 0}
@@ -738,10 +788,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
@@ -767,6 +818,12 @@ MonoBehaviour:
     width: 276
     height: 521
 >>>>>>> Revised Blockout
+=======
+    x: 1606
+    y: 73
+    width: 313
+    height: 610
+>>>>>>> Made DonoScene
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -1121,6 +1178,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     x: 0
     y: 759
     width: 1680
@@ -1142,6 +1200,12 @@ MonoBehaviour:
     width: 1385
     height: 250
 >>>>>>> Revised Blockout
+=======
+    x: 347
+    y: 704
+    width: 1572
+    height: 295
+>>>>>>> Made DonoScene
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1158,6 +1222,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     - Assets/Wesley Folder
 =======
     - Assets/John Folder
@@ -1165,11 +1230,15 @@ MonoBehaviour:
 =======
     - Assets/John Folder/Materials
 >>>>>>> Level Blockout in John Scene
+=======
+    - Assets/Donovan Folder
+>>>>>>> Made DonoScene
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
   - Assets/Wesley Folder
@@ -1187,12 +1256,16 @@ MonoBehaviour:
 =======
   - Assets/John Folder/Materials
 >>>>>>> Level Blockout in John Scene
+=======
+  - Assets/Donovan Folder
+>>>>>>> Made DonoScene
   m_LastFoldersGridSize: 80
-  m_LastProjectPath: C:\Users\johne\Documents\GitHub Repos\DownHorrendousPrototype\DownHorrendous_Unity
+  m_LastProjectPath: G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
     m_SelectedIDs: 66420000
@@ -1209,6 +1282,11 @@ MonoBehaviour:
     m_LastClickedID: 17400
     m_ExpandedIDs: 000000007c430000ea43000000ca9a3b
 >>>>>>> Revised Blockout
+=======
+    m_SelectedIDs: 34490000
+    m_LastClickedID: 18740
+    m_ExpandedIDs: 000000002c49000000ca9a3b
+>>>>>>> Made DonoScene
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1243,6 +1321,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     m_ExpandedIDs: 00000000fa3f0000fc3f0000fe3f000000400000024000000440000006400000084000000a4000000c4000000e40000010400000124000001440000016400000
 =======
     m_ExpandedIDs: 00000000f8410000
@@ -1253,6 +1332,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000007c430000
 >>>>>>> Revised Blockout
+=======
+    m_ExpandedIDs: 000000002c490000
+>>>>>>> Made DonoScene
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1298,6 +1380,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 1
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
       m_ClientGUIView: {fileID: 0}
 =======
       m_ClientGUIView: {fileID: 7}
@@ -1305,6 +1388,9 @@ MonoBehaviour:
 =======
       m_ClientGUIView: {fileID: 2}
 >>>>>>> Revised Blockout
+=======
+      m_ClientGUIView: {fileID: 7}
+>>>>>>> Made DonoScene
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1341,6 +1427,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     x: 0
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
@@ -1375,18 +1462,28 @@ MonoBehaviour:
     width: 305
     height: 250
 >>>>>>> Revised Blockout
+=======
+    x: 0
+    y: 704
+    width: 346
+    height: 295
+>>>>>>> Made DonoScene
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 539}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
       m_ExpandedIDs: acf0ffff52fbffff40410000
 >>>>>>> Level Blockout in John Scene
 =======
       m_ExpandedIDs: 52fbffff46410000
 >>>>>>> Revised Blockout
+=======
+      m_ExpandedIDs: 38f3ffff26f6ffff
+>>>>>>> Made DonoScene
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1440,6 +1537,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     x: 433
     y: 83
     width: 828
@@ -1462,6 +1560,12 @@ MonoBehaviour:
     width: 672
     height: 521
 >>>>>>> Revised Blockout
+=======
+    x: 0
+    y: 73
+    width: 763
+    height: 610
+>>>>>>> Made DonoScene
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: c2a712e980019d3469dd3e34410b25c9
@@ -1543,7 +1647,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.21153651, y: 0.33072764, z: -0.076445915, w: -0.91680235}
     speed: 2
-    m_Value: {x: -0.21159814, y: 0.3292699, z: -0.076109536, w: -0.9170686}
+    m_Value: {x: -0.21153651, y: 0.33072764, z: -0.076445915, w: -0.91680235}
   m_Size:
 <<<<<<< refs/remotes/origin/WesBranch
     m_Target: 11.502537
@@ -1609,6 +1713,7 @@ MonoBehaviour:
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     x: 433
     y: 83
     width: 828
@@ -1631,6 +1736,12 @@ MonoBehaviour:
     width: 740
     height: 521
 >>>>>>> Revised Blockout
+=======
+    x: 764
+    y: 73
+    width: 840
+    height: 610
+>>>>>>> Made DonoScene
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1654,6 +1765,7 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
     m_HBaseRangeMin: -207
     m_HBaseRangeMax: 207
     m_VBaseRangeMin: -116.5
@@ -1664,13 +1776,19 @@ MonoBehaviour:
     m_VBaseRangeMin: -480
     m_VBaseRangeMax: 480
 >>>>>>> JohnScene + RCSG + Blockout
+=======
+    m_HBaseRangeMin: -1280
+    m_HBaseRangeMax: 1280
+    m_VBaseRangeMin: -720
+    m_VBaseRangeMax: 720
+>>>>>>> Made DonoScene
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 1
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -1681,6 +1799,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
@@ -1706,12 +1825,19 @@ MonoBehaviour:
     m_Scale: {x: 0.4712278, y: 0.4712278}
     m_Translation: {x: 369.17435, y: 250}
 >>>>>>> Revised Blockout
+=======
+      width: 840
+      height: 589
+    m_Scale: {x: 0.4712278, y: 0.4712278}
+    m_Translation: {x: 419.17435, y: 294.5}
+>>>>>>> Made DonoScene
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
 <<<<<<< refs/remotes/origin/WesBranch
@@ -1749,6 +1875,15 @@ MonoBehaviour:
   m_defaultScale: 0.43359372
   m_LastWindowPixelSize: {x: 1110, y: 781.5}
 >>>>>>> Revised Blockout
+=======
+      x: -889.53656
+      y: -624.96313
+      width: 1782.5774
+      height: 1249.9263
+    m_MinimalGUI: 1
+  m_defaultScale: 0.328125
+  m_LastWindowPixelSize: {x: 840, y: 610}
+>>>>>>> Made DonoScene
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

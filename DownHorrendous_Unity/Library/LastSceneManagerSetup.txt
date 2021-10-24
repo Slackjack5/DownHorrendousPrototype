@@ -1,9 +1,13 @@
 sceneSetups:
 <<<<<<< refs/remotes/origin/WesBranch
+<<<<<<< refs/remotes/origin/WesBranch
 - path: Assets/Wesley Folder/Scenes/WesScene.unity
 =======
 - path: Assets/John Folder/JohnScene.unity
 >>>>>>> JohnScene + RCSG + Blockout
+=======
+- path: Assets/Donovan Folder/DonoSceneMain.unity
+>>>>>>> Made DonoScene
   isLoaded: 1
   isActive: 1
   isSubScene: 0
