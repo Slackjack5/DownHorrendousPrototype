@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
 
     [Header("Movement Tuning")]
     [SerializeField] [Range(0f, 360f)] private float rotationSpeed;
-    [SerializeField] [Range(0f, 10f)] private float moveSpeed;
+    [SerializeField] [Range(0.01f, 10f)] private float moveSpeed;
     [SerializeField] [Range(0.01f, 5f)] private float slipperiness;
 
     [Header("Controls")]
@@ -115,7 +115,7 @@ public class InputManager : MonoBehaviour
         {
             for (int i = 0; i < players.Count; i++)
             {
-                StartCoroutine(players[i].PlayerMovement.Decelerate(moveSpeed));
+                //StartCoroutine(players[i].PlayerMovement.Decelerate(moveSpeed));
             }
             inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
         }

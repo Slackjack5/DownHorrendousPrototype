@@ -10,13 +10,20 @@ public class PlayerMovement : MonoBehaviour
 
     private float timeMoving = 0f;
     private bool isMoving;
+    private float distanceToGround;
+    private float startingY;
+    private bool canGoUp = true;
+
+    private Vector3 eulerAngleVelocity;
 
     private Rigidbody rb;
-    private Vector3 eulerAngleVelocity;
+    private CapsuleCollider capsuleCollider;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
+        distanceToGround = capsuleCollider.bounds.extents.y;
     }
 
     void Update()
@@ -50,7 +57,40 @@ public class PlayerMovement : MonoBehaviour
         {
             timeMoving += Time.fixedDeltaTime;
         }
-        rb.velocity = Vector3.Slerp(Vector3.zero, transform.forward * maxSpeed, timeMoving / InputManager.Slipperiness);
+        //rb.AddForce(transform.forward * (maxSpeed / 50f), ForceMode.VelocityChange);
+        Vector3 deltaPosition = transform.forward * maxSpeed;
+        //if (Physics.CheckCapsule(new Vector3(capsuleCollider.bounds.max.x, capsuleCollider.bounds.max.y - 0.5f, capsuleCollider.bounds.max.z) , new Vector3(capsuleCollider.bounds.min.x, capsuleCollider.bounds.min.y + 0.4f, capsuleCollider.bounds.min.z), 1f))
+        //{
+        //    //deltaPosition.y = Physics.gravity.y / Time.fixedDeltaTime;
+        //}
+        if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.01f))
+        {
+            if (transform.position.y > startingY + 0.01f)
+            {
+                if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.5f))
+                {
+                    canGoUp = false;
+                    deltaPosition.y = Physics.gravity.y / 2f;
+                }else if (canGoUp)
+                {
+                    deltaPosition.y = -Physics.gravity.y / 2f;
+                }
+                else
+                {
+                    deltaPosition.y = Physics.gravity.y / 2f;
+                }
+            }
+            else
+            {
+                deltaPosition.y = Physics.gravity.y / 2f;
+            }
+        }
+        else
+        {
+            startingY = transform.position.y;
+            canGoUp = true;
+        }
+        rb.velocity = Vector3.Slerp(Vector3.zero, deltaPosition, timeMoving / InputManager.Slipperiness);
     }
 
     public IEnumerator Decelerate(float maxSpeed)
@@ -63,7 +103,36 @@ public class PlayerMovement : MonoBehaviour
                 if (timeMoving > 0f)
                 {
                     timeMoving -= Time.fixedDeltaTime;
-                    rb.velocity = Vector3.Slerp(Vector3.zero, transform.forward * maxSpeed, timeMoving / InputManager.Slipperiness);
+                    Vector3 deltaPosition = transform.forward * maxSpeed;
+                    if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.1f))
+                    {
+                        if (transform.position.y > startingY + 0.1f)
+                        {
+                            if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.5f))
+                            {
+                                canGoUp = false;
+                                deltaPosition.y = Physics.gravity.y / 2f;
+                            }
+                            else if (canGoUp)
+                            {
+                                deltaPosition.y = -Physics.gravity.y / 2f;
+                            }
+                            else
+                            {
+                                deltaPosition.y = Physics.gravity.y / 2f;
+                            }
+                        }
+                        else
+                        {
+                            deltaPosition.y = Physics.gravity.y / 2f;
+                        }
+                    }
+                    else
+                    {
+                        startingY = transform.position.y;
+                        canGoUp = true;
+                    }
+                    rb.velocity = Vector3.Slerp(Vector3.zero, deltaPosition, timeMoving / InputManager.Slipperiness);
                     yield return new WaitForFixedUpdate();
                 }
                 else
