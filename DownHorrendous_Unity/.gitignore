@@ -3,7 +3,7 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 /[Ll]ibrary/
-DownHorrendous_Unity_WwiseIntegrationTemp/
+**/DownHorrendous_Unity_WwiseIntegrationTemp/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
