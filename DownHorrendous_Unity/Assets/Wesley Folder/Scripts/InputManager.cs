@@ -14,12 +14,12 @@ public class InputManager : MonoBehaviour
         private set => _gizmosAreDisplayed = value;
     }
     private static bool _gizmosAreDisplayed;
-    public static float Slipperiness
-    {
-        get => _slipperiness;
-        private set => _slipperiness = value;
-        }
-    private static float _slipperiness;
+    //public static float Slipperiness
+    //{
+    //    get => _slipperiness;
+    //    private set => _slipperiness = value;
+    //    }
+    //private static float _slipperiness;
 
     private Dictionary<InputNames, InputClass> inputs = new Dictionary<InputNames, InputClass>();
 
@@ -29,14 +29,18 @@ public class InputManager : MonoBehaviour
     [Header("Movement Tuning")]
     [SerializeField] [Range(0f, 360f)] private float rotationSpeed;
     [SerializeField] [Range(0.01f, 10f)] private float moveSpeed;
-    [SerializeField] [Range(0.01f, 5f)] private float slipperiness;
+    //[SerializeField] [Range(0.01f, 5f)] private float slipperiness;
 
     [Header("Controls")]
     [SerializeField] private KeyCode inputRotateRight;
     [SerializeField] private KeyCode inputRotateLeft;
     [SerializeField] private KeyCode inputMoveForward;
 
-
+    void Awake()
+    {
+        GizmosAreDisplayed = gizmosAreDisplayed;
+        //Slipperiness = slipperiness;
+    }
 
     void Start()
     {
@@ -45,8 +49,6 @@ public class InputManager : MonoBehaviour
         {
             players.Add(playersArray[i]);
         }
-        GizmosAreDisplayed = gizmosAreDisplayed;
-        Slipperiness = slipperiness;
 
         #region assigning inputs
         inputs.Add(InputNames.Right, new InputClass());
@@ -82,7 +84,7 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetKeyUp(inputMoveForward))
         {
-            inputs[InputNames.Forward].keyState = InputClass.KeyState.Released;
+            inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
         }
         #endregion
     }
@@ -94,30 +96,31 @@ public class InputManager : MonoBehaviour
         {
             for (int i = 0; i < players.Count; i++)
             {
-                players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Right, rotationSpeed);
+                if (players[i].canInput)
+                {
+                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Right, rotationSpeed);
+                }
             }
         }
         if (inputs[InputNames.Left].keyState == InputClass.KeyState.Held)
         {
             for (int i = 0; i < players.Count; i++)
             {
-                players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Left, rotationSpeed);
+                if (players[i].canInput)
+                {
+                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Left, rotationSpeed);
+                }
             }
         }
         if (inputs[InputNames.Forward].keyState == InputClass.KeyState.Held)
         {
             for (int i = 0; i < players.Count; i++)
             {
-                players[i].PlayerMovement.MoveForward(moveSpeed);
+                if (players[i].canInput)
+                {
+                    players[i].PlayerMovement.MoveForward(moveSpeed);
+                }
             }
-        }
-        if (inputs[InputNames.Forward].keyState == InputClass.KeyState.Released)
-        {
-            for (int i = 0; i < players.Count; i++)
-            {
-                //StartCoroutine(players[i].PlayerMovement.Decelerate(moveSpeed));
-            }
-            inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
         }
         #endregion
     }

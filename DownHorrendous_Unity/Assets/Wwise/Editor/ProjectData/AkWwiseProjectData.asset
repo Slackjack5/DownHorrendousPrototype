@@ -15,6 +15,7 @@ MonoBehaviour:
   AcousticTextureWwu:
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
+<<<<<<< DonoBranch
   - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
 =======
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
@@ -22,6 +23,9 @@ MonoBehaviour:
 =======
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -29,6 +33,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0e43712006483049ae3dcae8ec0df64c
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: Virtual Acoustics/Default Work Unit
@@ -56,6 +61,15 @@ MonoBehaviour:
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: Virtual Acoustics/Default Work Unit
+    guid: 0e43712006483049ae3dcae8ec0df64c
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -63,6 +77,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 9bc8cfef91732746abde7c2969aec851
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
@@ -81,6 +96,12 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585666608645580677
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    guid: 9bc8cfef91732746abde7c2969aec851
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+>>>>>>> implemented slipping mechanic
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -97,6 +118,7 @@ MonoBehaviour:
         guid: d8a41415a61d2a41a17e75ca0c2149f3
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
+<<<<<<< DonoBranch
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
@@ -110,6 +132,11 @@ MonoBehaviour:
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -117,6 +144,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 95805b8edac97d42ad4c0b8a1b494631
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: SoundBanks/Default Work Unit
@@ -144,6 +172,15 @@ MonoBehaviour:
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: SoundBanks/Default Work Unit
+    guid: 95805b8edac97d42ad4c0b8a1b494631
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+    List: []
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -151,6 +188,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 04ed1d512e5a26419b07ca7a5117e048
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: Events/Default Work Unit
@@ -178,6 +216,15 @@ MonoBehaviour:
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: Events/Default Work Unit
+    guid: 04ed1d512e5a26419b07ca7a5117e048
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -185,6 +232,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 41551da74cf1334781e1b732c5819196
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: Game Parameters/Default Work Unit
@@ -212,6 +260,15 @@ MonoBehaviour:
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: Game Parameters/Default Work Unit
+    guid: 41551da74cf1334781e1b732c5819196
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+    List: []
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -219,6 +276,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 09745c86277b3140b482c79f903e966b
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: States/Default Work Unit
@@ -246,6 +304,15 @@ MonoBehaviour:
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: States/Default Work Unit
+    guid: 09745c86277b3140b482c79f903e966b
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -253,6 +320,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: a740cfd70b7c54498919eb50f261b1b5
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: Switches/Default Work Unit
@@ -280,6 +348,15 @@ MonoBehaviour:
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: Switches/Default Work Unit
+    guid: a740cfd70b7c54498919eb50f261b1b5
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+>>>>>>> implemented slipping mechanic
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -287,6 +364,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0330936006e32e4a9c6ef3b6dd640970
+<<<<<<< DonoBranch
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
     ParentPath: Triggers/Default Work Unit
@@ -305,6 +383,12 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585666608645066005
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+    ParentPath: Triggers/Default Work Unit
+    guid: 0330936006e32e4a9c6ef3b6dd640970
+    GuidInternal: 
+    m_lastTime: -8585665920684775808
+>>>>>>> implemented slipping mechanic
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

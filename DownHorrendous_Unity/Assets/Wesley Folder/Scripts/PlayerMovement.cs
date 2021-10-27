@@ -13,14 +13,18 @@ public class PlayerMovement : MonoBehaviour
     private float distanceToGround;
     private float startingY;
     private bool canGoUp = true;
+    private bool shouldBeUpright = true;
 
     private Vector3 eulerAngleVelocity;
+
+    private Player player;
 
     private Rigidbody rb;
     private CapsuleCollider capsuleCollider;
 
     void Start()
     {
+        player = GetComponent<Player>();
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         distanceToGround = capsuleCollider.bounds.extents.y;
@@ -32,6 +36,14 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 forward = transform.TransformDirection(Vector3.forward) * debugRayLength;
             Debug.DrawRay(transform.position, forward, Color.red);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (shouldBeUpright)
+        {
+            StayUpright();
         }
     }
 
@@ -50,102 +62,86 @@ public class PlayerMovement : MonoBehaviour
         rb.MoveRotation(rb.rotation * deltaRotation);
     }
 
-    public void MoveForward(float maxSpeed)
+    //public void MoveForward(float maxSpeed) OLD Version of Movement
+    //{
+    //    isMoving = true;
+    //    if (timeMoving < InputManager.Slipperiness)
+    //    {
+    //        timeMoving += Time.fixedDeltaTime;
+    //    }
+    //    //rb.AddForce(transform.forward * (maxSpeed / 50f), ForceMode.VelocityChange);
+    //    Vector3 deltaPosition = transform.forward * maxSpeed;
+    //    //if (Physics.CheckCapsule(new Vector3(capsuleCollider.bounds.max.x, capsuleCollider.bounds.max.y - 0.5f, capsuleCollider.bounds.max.z) , new Vector3(capsuleCollider.bounds.min.x, capsuleCollider.bounds.min.y + 0.4f, capsuleCollider.bounds.min.z), 1f))
+    //    //{
+    //    //    //deltaPosition.y = Physics.gravity.y / Time.fixedDeltaTime;
+    //    //}
+    //    if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.01f))
+    //    {
+    //        if (transform.position.y > startingY + 0.01f)
+    //        {
+    //            if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.5f))
+    //            {
+    //                canGoUp = false;
+    //                deltaPosition.y = Physics.gravity.y / 2f;
+    //            }else if (canGoUp)
+    //            {
+    //                deltaPosition.y = -Physics.gravity.y / 2f;
+    //            }
+    //            else
+    //            {
+    //                deltaPosition.y = Physics.gravity.y / 2f;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            deltaPosition.y = Physics.gravity.y / 2f;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        startingY = transform.position.y;
+    //        canGoUp = true;
+    //    }
+    //    rb.velocity = Vector3.Slerp(Vector3.zero, deltaPosition, timeMoving / InputManager.Slipperiness);
+    //}
+
+    public void MoveForward(float forceMagnitude)
     {
-        isMoving = true;
-        if (timeMoving < InputManager.Slipperiness)
+        rb.AddForce(transform.forward * forceMagnitude, ForceMode.Force);
+    }
+
+    public IEnumerator Slip()
+    {
+        //float originalAngularDrag = rb.angularDrag;
+        //rb.angularDrag = 0f;
+        //shouldBeUpright = false;
+        rb.AddForce(transform.up * CollisionManager.SlipHeight, ForceMode.Impulse);
+        rb.AddTorque(transform.right * -CollisionManager.SlipTorqueMagnitude, ForceMode.Impulse);
+        yield return new WaitForSeconds(1f);
+        yield return new WaitUntil(() => IsGrounded());
+        //rb.angularDrag = originalAngularDrag;
+        shouldBeUpright = true;
+        player.canInput = true;
+        yield break;
+    }
+
+    private bool IsGrounded()
+    {
+        Vector3 sphereCenter = new Vector3(transform.position.x, transform.position.y - (capsuleCollider.bounds.extents.y + 0.1f), transform.position.z);
+        if (!Physics.CheckSphere(sphereCenter, capsuleCollider.radius, CollisionManager.GroundMask))
         {
-            timeMoving += Time.fixedDeltaTime;
-        }
-        //rb.AddForce(transform.forward * (maxSpeed / 50f), ForceMode.VelocityChange);
-        Vector3 deltaPosition = transform.forward * maxSpeed;
-        //if (Physics.CheckCapsule(new Vector3(capsuleCollider.bounds.max.x, capsuleCollider.bounds.max.y - 0.5f, capsuleCollider.bounds.max.z) , new Vector3(capsuleCollider.bounds.min.x, capsuleCollider.bounds.min.y + 0.4f, capsuleCollider.bounds.min.z), 1f))
-        //{
-        //    //deltaPosition.y = Physics.gravity.y / Time.fixedDeltaTime;
-        //}
-        if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.01f))
-        {
-            if (transform.position.y > startingY + 0.01f)
-            {
-                if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.5f))
-                {
-                    canGoUp = false;
-                    deltaPosition.y = Physics.gravity.y / 2f;
-                }else if (canGoUp)
-                {
-                    deltaPosition.y = -Physics.gravity.y / 2f;
-                }
-                else
-                {
-                    deltaPosition.y = Physics.gravity.y / 2f;
-                }
-            }
-            else
-            {
-                deltaPosition.y = Physics.gravity.y / 2f;
-            }
+            return false;
         }
         else
         {
-            startingY = transform.position.y;
-            canGoUp = true;
+            return true;
         }
-        rb.velocity = Vector3.Slerp(Vector3.zero, deltaPosition, timeMoving / InputManager.Slipperiness);
     }
 
-    public IEnumerator Decelerate(float maxSpeed)
+    private void StayUpright() //based on this: https://answers.unity.com/questions/10425/how-to-stabilize-angular-motion-alignment-of-hover.html
     {
-        isMoving = false;
-        while (true)
-        {
-            if (!isMoving)
-            {
-                if (timeMoving > 0f)
-                {
-                    timeMoving -= Time.fixedDeltaTime;
-                    Vector3 deltaPosition = transform.forward * maxSpeed;
-                    if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.1f))
-                    {
-                        if (transform.position.y > startingY + 0.1f)
-                        {
-                            if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.5f))
-                            {
-                                canGoUp = false;
-                                deltaPosition.y = Physics.gravity.y / 2f;
-                            }
-                            else if (canGoUp)
-                            {
-                                deltaPosition.y = -Physics.gravity.y / 2f;
-                            }
-                            else
-                            {
-                                deltaPosition.y = Physics.gravity.y / 2f;
-                            }
-                        }
-                        else
-                        {
-                            deltaPosition.y = Physics.gravity.y / 2f;
-                        }
-                    }
-                    else
-                    {
-                        startingY = transform.position.y;
-                        canGoUp = true;
-                    }
-                    rb.velocity = Vector3.Slerp(Vector3.zero, deltaPosition, timeMoving / InputManager.Slipperiness);
-                    yield return new WaitForFixedUpdate();
-                }
-                else
-                {
-                    timeMoving = 0f;
-                    rb.velocity = Vector3.zero;
-                    yield break;
-                }
-            }
-            else
-            {
-                yield break;
-            }
-        }
+        Vector3 predictedUp = Quaternion.AngleAxis(rb.angularVelocity.magnitude * Mathf.Rad2Deg * PlayerPhysics.StabilityFactor / PlayerPhysics.StabilizeSpeed, rb.angularVelocity) * transform.up;
+        Vector3 torqueVector = Vector3.Cross(predictedUp, Vector3.up);
+        rb.AddTorque(torqueVector * PlayerPhysics.StabilizeSpeed * PlayerPhysics.StabilizeSpeed);
     }
 }
