@@ -28,19 +28,19 @@ public class CollisionManager : MonoBehaviour
     private static LayerMask _groundMask;
     [SerializeField] private LayerMask groundMask;
 
-    public static LayerMask SlipperyMask
+    public static int SlipperyLayer
     {
-        get => _slipperyMask;
-        private set => _slipperyMask = value;
+        get => _slipperyLayer;
+        private set => _slipperyLayer = value;
     }
-    private static LayerMask _slipperyMask;
-    [SerializeField] private LayerMask slipperyMask;
+    private static int _slipperyLayer;
+    [SerializeField] private int slipperyLayer;
 
     void Awake()
     {
         SlipHeight = slipHeight;
         SlipTorqueMagnitude = slipTorqueMagnitude;
         GroundMask = groundMask;
-        SlipperyMask = slipperyMask;
+        SlipperyLayer = slipperyLayer;
     }
 }

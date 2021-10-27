@@ -13,7 +13,7 @@ public class PlayerCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == CollisionManager.SlipperyMask && player.canInput)
+        if (other.gameObject.layer == CollisionManager.SlipperyLayer && player.canInput)
         {
             player.canInput = false;
             StartCoroutine(player.PlayerMovement.Slip());

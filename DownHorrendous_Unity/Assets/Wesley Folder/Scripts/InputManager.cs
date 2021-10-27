@@ -14,12 +14,6 @@ public class InputManager : MonoBehaviour
         private set => _gizmosAreDisplayed = value;
     }
     private static bool _gizmosAreDisplayed;
-    //public static float Slipperiness
-    //{
-    //    get => _slipperiness;
-    //    private set => _slipperiness = value;
-    //    }
-    //private static float _slipperiness;
 
     private Dictionary<InputNames, InputClass> inputs = new Dictionary<InputNames, InputClass>();
 
@@ -29,7 +23,20 @@ public class InputManager : MonoBehaviour
     [Header("Movement Tuning")]
     [SerializeField] [Range(0f, 360f)] private float rotationSpeed;
     [SerializeField] [Range(0.01f, 10f)] private float moveSpeed;
-    //[SerializeField] [Range(0.01f, 5f)] private float slipperiness;
+    public static float SlopeOffset
+    {
+        get => _slopeOffset;
+        private set => _slopeOffset = value;
+    }
+    private static float _slopeOffset;
+    [SerializeField] [Range(0f, 89.9f)] private float slopeOffset;
+    public static float StepOffset
+    {
+        get => _stepOffset;
+        private set => _stepOffset = value;
+    }
+    private static float _stepOffset;
+    [SerializeField] [Range(0.01f, 0.5f)] private float stepOffset;
 
     [Header("Controls")]
     [SerializeField] private KeyCode inputRotateRight;
@@ -39,7 +46,8 @@ public class InputManager : MonoBehaviour
     void Awake()
     {
         GizmosAreDisplayed = gizmosAreDisplayed;
-        //Slipperiness = slipperiness;
+        SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
+        StepOffset = stepOffset;
     }
 
     void Start()
@@ -84,6 +92,10 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetKeyUp(inputMoveForward))
         {
+            for (int i = 0; i < players.Count; i++)
+            {
+                players[i].PlayerMovement.UseGravity();
+            }
             inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
         }
         #endregion

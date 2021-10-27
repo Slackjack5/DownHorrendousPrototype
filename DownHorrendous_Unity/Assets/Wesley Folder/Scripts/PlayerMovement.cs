@@ -8,11 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     private readonly float debugRayLength = 2f;
 
-    private float timeMoving = 0f;
-    private bool isMoving;
-    private float distanceToGround;
-    private float startingY;
-    private bool canGoUp = true;
     private bool shouldBeUpright = true;
 
     private Vector3 eulerAngleVelocity;
@@ -27,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Player>();
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
-        distanceToGround = capsuleCollider.bounds.extents.y;
     }
 
     void Update()
@@ -62,52 +56,9 @@ public class PlayerMovement : MonoBehaviour
         rb.MoveRotation(rb.rotation * deltaRotation);
     }
 
-    //public void MoveForward(float maxSpeed) OLD Version of Movement
-    //{
-    //    isMoving = true;
-    //    if (timeMoving < InputManager.Slipperiness)
-    //    {
-    //        timeMoving += Time.fixedDeltaTime;
-    //    }
-    //    //rb.AddForce(transform.forward * (maxSpeed / 50f), ForceMode.VelocityChange);
-    //    Vector3 deltaPosition = transform.forward * maxSpeed;
-    //    //if (Physics.CheckCapsule(new Vector3(capsuleCollider.bounds.max.x, capsuleCollider.bounds.max.y - 0.5f, capsuleCollider.bounds.max.z) , new Vector3(capsuleCollider.bounds.min.x, capsuleCollider.bounds.min.y + 0.4f, capsuleCollider.bounds.min.z), 1f))
-    //    //{
-    //    //    //deltaPosition.y = Physics.gravity.y / Time.fixedDeltaTime;
-    //    //}
-    //    if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.01f))
-    //    {
-    //        if (transform.position.y > startingY + 0.01f)
-    //        {
-    //            if (!Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.5f))
-    //            {
-    //                canGoUp = false;
-    //                deltaPosition.y = Physics.gravity.y / 2f;
-    //            }else if (canGoUp)
-    //            {
-    //                deltaPosition.y = -Physics.gravity.y / 2f;
-    //            }
-    //            else
-    //            {
-    //                deltaPosition.y = Physics.gravity.y / 2f;
-    //            }
-    //        }
-    //        else
-    //        {
-    //            deltaPosition.y = Physics.gravity.y / 2f;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        startingY = transform.position.y;
-    //        canGoUp = true;
-    //    }
-    //    rb.velocity = Vector3.Slerp(Vector3.zero, deltaPosition, timeMoving / InputManager.Slipperiness);
-    //}
-
     public void MoveForward(float forceMagnitude)
     {
-        rb.AddForce(transform.forward * forceMagnitude, ForceMode.Force);
+        rb.AddForce(CalculateTrajectory() * forceMagnitude, ForceMode.Force);
     }
 
     public IEnumerator Slip()
@@ -123,6 +74,42 @@ public class PlayerMovement : MonoBehaviour
         shouldBeUpright = true;
         player.canInput = true;
         yield break;
+    }
+
+    private Vector3 CalculateTrajectory()
+    {
+        Vector3 bottomRayStartPosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.bounds.extents.y, transform.position.z);
+        Vector3 topRayStartPosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.bounds.extents.y + InputManager.StepOffset, transform.position.z);
+        Ray bottomRay = new Ray(bottomRayStartPosition, transform.forward);
+        Ray topRay = new Ray(topRayStartPosition, transform.forward);
+        if (Physics.Raycast(bottomRay, out RaycastHit bottomHit, 0.01f) && Physics.Raycast(topRay, out RaycastHit topHit, Mathf.Infinity))
+        {
+            if (topHit.distance > bottomHit.distance)
+            {
+                float slopeAngle = Mathf.Atan2(topHit.point.y - bottomHit.point.y, topHit.distance - bottomHit.distance);
+                if (slopeAngle <= InputManager.SlopeOffset)
+                {
+                    Quaternion rotation = Quaternion.AngleAxis(-slopeAngle, transform.right);
+                    rb.useGravity = false;
+                    return rotation * transform.forward;
+                }
+                else
+                {
+                    rb.useGravity = true;
+                    return transform.forward;
+                }
+            }
+            else
+            {
+                rb.useGravity = true;
+                return transform.forward;
+            }
+        }
+        else
+        {
+            rb.useGravity = true;
+            return transform.forward;
+        }
     }
 
     private bool IsGrounded()
@@ -143,5 +130,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 predictedUp = Quaternion.AngleAxis(rb.angularVelocity.magnitude * Mathf.Rad2Deg * PlayerPhysics.StabilityFactor / PlayerPhysics.StabilizeSpeed, rb.angularVelocity) * transform.up;
         Vector3 torqueVector = Vector3.Cross(predictedUp, Vector3.up);
         rb.AddTorque(torqueVector * PlayerPhysics.StabilizeSpeed * PlayerPhysics.StabilizeSpeed);
+    }
+
+    public void UseGravity()
+    {
+        rb.useGravity = true;
     }
 }
