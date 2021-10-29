@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -30,6 +31,9 @@ MonoBehaviour:
 =======
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -37,6 +41,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0e43712006483049ae3dcae8ec0df64c
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -60,6 +65,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 0e43712006483049ae3dcae8ec0df64c
     GuidInternal: 
@@ -67,6 +74,7 @@ MonoBehaviour:
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -80,6 +88,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -87,6 +97,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 9bc8cfef91732746abde7c2969aec851
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -104,10 +115,13 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9bc8cfef91732746abde7c2969aec851
     GuidInternal: 
     m_lastTime: -8585666608645580677
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -118,6 +132,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -132,6 +148,7 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -159,6 +176,11 @@ MonoBehaviour:
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -166,6 +188,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 95805b8edac97d42ad4c0b8a1b494631
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -189,6 +212,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: SoundBanks\Default Work Unit
     guid: 95805b8edac97d42ad4c0b8a1b494631
     GuidInternal: 
@@ -196,6 +221,7 @@ MonoBehaviour:
     List: []
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -209,6 +235,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -216,6 +244,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 04ed1d512e5a26419b07ca7a5117e048
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -239,6 +268,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: Events\Default Work Unit
     guid: 04ed1d512e5a26419b07ca7a5117e048
     GuidInternal: 
@@ -246,6 +277,7 @@ MonoBehaviour:
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -259,6 +291,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -266,6 +300,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 41551da74cf1334781e1b732c5819196
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -289,6 +324,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: Game Parameters\Default Work Unit
     guid: 41551da74cf1334781e1b732c5819196
     GuidInternal: 
@@ -296,6 +333,7 @@ MonoBehaviour:
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -309,6 +347,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -316,6 +356,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 09745c86277b3140b482c79f903e966b
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -339,6 +380,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: States\Default Work Unit
     guid: 09745c86277b3140b482c79f903e966b
     GuidInternal: 
@@ -346,6 +389,7 @@ MonoBehaviour:
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -359,6 +403,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -366,6 +412,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: a740cfd70b7c54498919eb50f261b1b5
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -389,6 +436,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: Switches\Default Work Unit
     guid: a740cfd70b7c54498919eb50f261b1b5
     GuidInternal: 
@@ -396,6 +445,7 @@ MonoBehaviour:
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -409,6 +459,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -416,6 +468,7 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0330936006e32e4a9c6ef3b6dd640970
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 <<<<<<< DonoBranch
 <<<<<<< DonoBranch
@@ -433,10 +486,13 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     ParentPath: Triggers\Default Work Unit
     guid: 0330936006e32e4a9c6ef3b6dd640970
     GuidInternal: 
     m_lastTime: -8585666608645066005
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/main
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
 =======
@@ -447,6 +503,8 @@ MonoBehaviour:
 >>>>>>> implemented slipping mechanic
 =======
 >>>>>>> Lights Objective + Roulette bed + Physics Cubes
+=======
+>>>>>>> JohnBranch3
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
