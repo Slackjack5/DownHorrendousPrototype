@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
         private set => _stepOffset = value;
     }
     private static float _stepOffset;
-    [SerializeField] [Range(0.01f, 0.5f)] private float stepOffset;
+    [SerializeField] [Range(0.01f, 1f)] private float stepOffset;
 
     [Header("Controls")]
     [SerializeField] private KeyCode inputRotateRight;

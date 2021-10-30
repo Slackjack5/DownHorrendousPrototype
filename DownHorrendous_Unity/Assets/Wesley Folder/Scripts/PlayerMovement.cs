@@ -63,14 +63,10 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator Slip()
     {
-        //float originalAngularDrag = rb.angularDrag;
-        //rb.angularDrag = 0f;
-        //shouldBeUpright = false;
         rb.AddForce(transform.up * CollisionManager.SlipHeight, ForceMode.Impulse);
         rb.AddTorque(transform.right * -CollisionManager.SlipTorqueMagnitude, ForceMode.Impulse);
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => IsGrounded());
-        //rb.angularDrag = originalAngularDrag;
         shouldBeUpright = true;
         player.canInput = true;
         yield break;
