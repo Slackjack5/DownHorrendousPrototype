@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private enum InputNames { Right, Left, Forward };
+
+  
+  private enum InputNames { Right, Left, Forward };
+  //Declare GameManager
+  private GameObject gameManager;
 
     private List<Player> players = new List<Player>();
 
@@ -48,10 +52,14 @@ public class InputManager : MonoBehaviour
         GizmosAreDisplayed = gizmosAreDisplayed;
         SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
         StepOffset = stepOffset;
+
+      //Assign GameManager
+      gameManager = GameObject.Find("GameManager");
     }
 
     void Start()
     {
+
         Player[] playersArray = FindObjectsOfType<Player>();
         for (int i = 0; i < playersArray.Length; i++)
         {
@@ -70,35 +78,40 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+      //If the game started, turn on inputs
+      if (gameManager.GetComponent<GameManager>().gameStarted == true && gameManager.GetComponent<GameManager>().gameFinished==false)
+      {
         #region check inputs
         if (Input.GetKey(inputRotateRight))
         {
-            inputs[InputNames.Right].keyState = InputClass.KeyState.Held;
-        }else if (Input.GetKey(inputRotateLeft))
+          inputs[InputNames.Right].keyState = InputClass.KeyState.Held;
+        }
+        else if (Input.GetKey(inputRotateLeft))
         {
-            inputs[InputNames.Left].keyState = InputClass.KeyState.Held;
+          inputs[InputNames.Left].keyState = InputClass.KeyState.Held;
         }
         if (Input.GetKey(inputMoveForward))
         {
-            inputs[InputNames.Forward].keyState = InputClass.KeyState.Held;
+          inputs[InputNames.Forward].keyState = InputClass.KeyState.Held;
         }
         if (Input.GetKeyUp(inputRotateRight))
         {
-            inputs[InputNames.Right].keyState = InputClass.KeyState.Untouched;
+          inputs[InputNames.Right].keyState = InputClass.KeyState.Untouched;
         }
         if (Input.GetKeyUp(inputRotateLeft))
         {
-            inputs[InputNames.Left].keyState = InputClass.KeyState.Untouched;
+          inputs[InputNames.Left].keyState = InputClass.KeyState.Untouched;
         }
         if (Input.GetKeyUp(inputMoveForward))
         {
-            for (int i = 0; i < players.Count; i++)
-            {
-                players[i].PlayerMovement.UseGravity();
-            }
-            inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
+          for (int i = 0; i < players.Count; i++)
+          {
+            players[i].PlayerMovement.UseGravity();
+          }
+          inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
         }
         #endregion
+      }
     }
 
     private void FixedUpdate()
