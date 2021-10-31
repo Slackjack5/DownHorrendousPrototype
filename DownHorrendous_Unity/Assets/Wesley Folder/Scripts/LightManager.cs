@@ -30,6 +30,7 @@ public class LightManager : MonoBehaviour
         lightSwitches = FindObjectsOfType<LightSwitch>();
         LoveLightParent = loveLightParent;
         NormalLightParent = normalLightParent;
+        RoomAmbience = Ambience.Normal;
     }
 
     public static void SwitchLights(Ambience newAmbience)

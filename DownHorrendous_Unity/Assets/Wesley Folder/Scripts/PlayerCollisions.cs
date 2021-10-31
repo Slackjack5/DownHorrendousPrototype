@@ -5,6 +5,9 @@ using System;
 
 public class PlayerCollisions : MonoBehaviour
 {
+    private bool isMoody;
+    private static int playersTouchingBedCount = 0;
+
     private Player player;
 
     void Start()
@@ -27,12 +30,34 @@ public class PlayerCollisions : MonoBehaviour
                 if (LightManager.RoomAmbience == LightManager.Ambience.Normal)
                 {
                     LightManager.SwitchLights(LightManager.Ambience.Love);
+                    isMoody = true;
                 }
                 if (LightManager.RoomAmbience == LightManager.Ambience.Love)
                 {
                     LightManager.SwitchLights(LightManager.Ambience.Normal);
+                    isMoody = false;
                 }
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
+        {
+            playersTouchingBedCount++;
+            if (playersTouchingBedCount >= 2)
+            {
+                GameManager.gameFinished = true;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
+        {
+            playersTouchingBedCount--;
         }
     }
 
@@ -41,6 +66,14 @@ public class PlayerCollisions : MonoBehaviour
         if (other.gameObject.GetComponent<LightSwitch>())
         {
             other.gameObject.GetComponent<LightSwitch>().isOn = false;
+            if (isMoody)
+            {
+                LightManager.RoomAmbience = LightManager.Ambience.Love;
+            }
+            else
+            {
+                LightManager.RoomAmbience = LightManager.Ambience.Normal;
+            }
         }
     }
 }

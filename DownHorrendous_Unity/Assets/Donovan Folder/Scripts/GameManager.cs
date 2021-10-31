@@ -6,7 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public bool gameStarted;
-    public bool gameFinished;
+    public static bool gameFinished;
     [SerializeField] private TextMeshProUGUI interfaceText;
     private int currentTime = 3;
     private bool timerWait;

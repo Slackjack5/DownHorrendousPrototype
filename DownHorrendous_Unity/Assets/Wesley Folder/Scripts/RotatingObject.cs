@@ -13,8 +13,15 @@ public class RotatingObject : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    //void Update()
+    //{
+    //    transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+    //}
+
+    private void FixedUpdate()
     {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+        Vector3 eulerAngleVelocity = Vector3.up * rotationSpeed;
+        Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity * Time.fixedDeltaTime);
+        rb.MoveRotation(deltaRotation * rb.rotation);
     }
 }
