@@ -79,16 +79,19 @@ public class PlayerCollisions : MonoBehaviour
     {
         if (other.gameObject.GetComponent<LightSwitch>())
         {
-            other.gameObject.GetComponent<LightSwitch>().isOn = false;
+          other.gameObject.GetComponent<LightSwitch>().isOn = false;
+          if (Array.TrueForAll(LightManager.lightSwitches, x => !x.isOn))
+          {
             if (isMoody)
             {
-                LightManager.RoomAmbience = LightManager.Ambience.Love;
+              LightManager.RoomAmbience = LightManager.Ambience.Love;
             }
             else
             {
-                LightManager.RoomAmbience = LightManager.Ambience.Normal;
+              LightManager.RoomAmbience = LightManager.Ambience.Normal;
             }
         }
+    }
         /*
         if (other.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
         {
