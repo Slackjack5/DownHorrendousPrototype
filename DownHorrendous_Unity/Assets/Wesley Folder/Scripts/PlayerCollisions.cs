@@ -39,10 +39,21 @@ public class PlayerCollisions : MonoBehaviour
                 }
             }
         }
+        /*
+        if (other.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
+        {
+          playersTouchingBedCount++;
+          if (playersTouchingBedCount >= 2)
+          {
+            GameManager.gameFinished = true;
+          }
+        }
+        */
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+    
         if (collision.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
         {
             playersTouchingBedCount++;
@@ -51,14 +62,17 @@ public class PlayerCollisions : MonoBehaviour
                 GameManager.gameFinished = true;
             }
         }
+        
     }
 
     private void OnCollisionExit(Collision collision)
     {
+        
         if (collision.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
         {
             playersTouchingBedCount--;
         }
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -75,5 +89,11 @@ public class PlayerCollisions : MonoBehaviour
                 LightManager.RoomAmbience = LightManager.Ambience.Normal;
             }
         }
-    }
+        /*
+        if (other.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love)
+        {
+          playersTouchingBedCount--;
+        }
+        */
+  }
 }
