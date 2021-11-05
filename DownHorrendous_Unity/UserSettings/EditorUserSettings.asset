@@ -19,6 +19,7 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-4:
 <<<<<<< main
+<<<<<<< main
       value: 224247031146466c081d00270963791f1a131d38631b2535232c0e7cd5e5270be1e238eca92f31352d1b
       flags: 0
     RecentlyUsedScenePath-5:
@@ -27,6 +28,9 @@ EditorUserSettings:
     RecentlyUsedScenePath-6:
       value: 224247031146467102060262362c531413055700232028032e2c1336acf53a31f6fe
 =======
+=======
+<<<<<<< refs/remotes/origin/WesBranch2
+>>>>>>> New Objectives + Background + Layout Revision
       value: 224247031146467f02000334112d1f36191b1c2f3e67023f23262e30e7ee3178cfe63fe7a92f31352d1b
       flags: 0
     RecentlyUsedScenePath-5:
@@ -34,7 +38,19 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-6:
       value: 224247031146466c081d00270963791f1a131d38631b2535232c0e7cd5e5270be1e238eca92f31352d1b
+<<<<<<< main
 >>>>>>> added fire state, candle + jukebox objectives, lovers turn to each other
+=======
+=======
+      value: 224247031146466c081d00270963791f1a131d38631b2535232c0e7cd5e5270be1e238eca92f31352d1b
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 224247031146467f02000334112d1f36191b1c2f3e67023f23262e30e7ee3178cfe63fe7a92f31352d1b
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 224247031146467102060262362c531413055700232028032e2c1336acf53a31f6fe
+>>>>>>> New Objectives + Background + Layout Revision
+>>>>>>> New Objectives + Background + Layout Revision
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
