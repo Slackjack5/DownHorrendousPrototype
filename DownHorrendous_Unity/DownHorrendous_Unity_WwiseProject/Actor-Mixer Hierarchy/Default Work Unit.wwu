@@ -1,6 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SoundEffects" ID="{A7DBAA3A-B965-47E4-9E26-12949B342F22}" ShortID="621216474">
+					<ChildrenList>
+						<Sound Name="SlipSound" ID="{179C73CF-EB21-412C-8C1F-308F816FB6BB}" ShortID="1034539415">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4B38A175-34D5-40F9-9631-8CD82951A3F1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-101"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cartoon Slip _ Sound Effect" ID="{86BB80DF-2AB3-45BD-BD81-4314C89AD163}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.244363888888889"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.00289188034188026"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.380282264957265"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.772132051282051"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cartoon Slip _ Sound Effect.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="605550199"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Cartoon Slip _ Sound Effect" ID="{86BB80DF-2AB3-45BD-BD81-4314C89AD163}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="LightSwitch" ID="{63572BE9-8E48-41A4-B0FB-19CCDAA8A3D2}" ShortID="1068097913">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Light switch - SOUND EFFECT -" ID="{6935093E-0C2A-446E-BABF-D9871E1CF472}">
+									<Language>SFX</Language>
+									<AudioFile>Light switch - SOUND EFFECT -.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="704387569"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Light switch - SOUND EFFECT -" ID="{6935093E-0C2A-446E-BABF-D9871E1CF472}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="OnFire" ID="{9B631D67-202E-4518-8664-0AA6DF5AF5B3}" ShortID="450420976">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OnFire" ID="{C77F48CA-BB37-4473-83C5-138436194B06}">
+									<Language>SFX</Language>
+									<AudioFile>OnFire.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="251655869"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="OnFire" ID="{C77F48CA-BB37-4473-83C5-138436194B06}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<RandomSequenceContainer Name="CollisioSounds" ID="{CA18FA42-59D9-4810-BD18-BD2C4AECBE5A}" ShortID="8315387">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EF1DE1EA-F59F-44EF-847D-723508C64116}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-354"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SSMiM_Balloon_Tap7" ID="{5B258C50-DFDC-4DDB-BF73-ABADE7C26E04}" ShortID="851010769">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SSMiM_Balloon_Tap7" ID="{3D2D84ED-477E-4263-A2CB-6A95FE2C42CB}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0747252747252747"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SSMiM_Balloon_Tap7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="972701081"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SSMiM_Balloon_Tap7" ID="{3D2D84ED-477E-4263-A2CB-6A95FE2C42CB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SSMiM_Balloon_Tap8" ID="{432FAEB0-501E-45D0-B77D-F62405E824AF}" ShortID="248048950">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SSMiM_Balloon_Tap8" ID="{30EE2FF7-629A-44DA-A45E-C2A0F0ECCEA6}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.101098901098901"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.101098901098901"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SSMiM_Balloon_Tap8.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="795694986"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SSMiM_Balloon_Tap8" ID="{30EE2FF7-629A-44DA-A45E-C2A0F0ECCEA6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SSMiM_Balloon_Tap11" ID="{6B494285-5D92-4EF0-9C92-91FCC900939D}" ShortID="1016616329">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>130</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SSMiM_Balloon_Tap11" ID="{62401912-BDE1-45D9-8028-8F61CDB599F0}">
+									<Language>SFX</Language>
+									<AudioFile>SSMiM_Balloon_Tap11.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="185994890"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SSMiM_Balloon_Tap11" ID="{62401912-BDE1-45D9-8028-8F61CDB599F0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SSMiM_Balloon_Tap23" ID="{478F950A-65AE-405E-95CE-D0E7AE14580D}" ShortID="643720088">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SSMiM_Balloon_Tap23" ID="{A1525343-C083-457F-9756-F525760B5BCE}">
+									<Language>SFX</Language>
+									<AudioFile>SSMiM_Balloon_Tap23.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="793581598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SSMiM_Balloon_Tap23" ID="{A1525343-C083-457F-9756-F525760B5BCE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SSMiM_Balloon_Tap4" ID="{4A30041B-8D9E-457D-8C10-4F789A1383F2}" ShortID="92500767">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SSMiM_Balloon_Tap4" ID="{483B7C7C-2F95-40C1-B94A-D5BD60E5FF22}">
+									<Language>SFX</Language>
+									<AudioFile>SSMiM_Balloon_Tap4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="556800067"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SSMiM_Balloon_Tap4" ID="{483B7C7C-2F95-40C1-B94A-D5BD60E5FF22}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
