@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [System.NonSerialized] public bool canInput;
+    [System.NonSerialized] public bool isOnFire;
 
     public PlayerCollisions PlayerCollisions
     {
@@ -21,12 +22,16 @@ public class Player : MonoBehaviour
     private PlayerMovement _playerMovement;
 
     private Rigidbody rb;
+    [System.NonSerialized] public Renderer playerRenderer;
+    [System.NonSerialized] public Color baseColor;
 
     void Awake()
     {
         PlayerCollisions = gameObject.AddComponent<PlayerCollisions>();
         PlayerMovement = gameObject.AddComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
+        playerRenderer = GetComponent<Renderer>();
+        baseColor = playerRenderer.material.color;
     }
 
     void Start()

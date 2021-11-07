@@ -12,14 +12,26 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 eulerAngleVelocity;
 
+    public IEnumerator meetEyesCoroutine;
+
     private Player player;
+    private Player otherPlayer;
 
     private Rigidbody rb;
     private CapsuleCollider capsuleCollider;
 
     void Start()
     {
+        meetEyesCoroutine = MeetEyes();
         player = GetComponent<Player>();
+        Player[] playersArray = FindObjectsOfType<Player>();
+        foreach (Player playerIndex in playersArray)
+        {
+            if (playerIndex.gameObject != gameObject)
+            {
+                otherPlayer = playerIndex;
+            }
+        }
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
     }
@@ -70,6 +82,66 @@ public class PlayerMovement : MonoBehaviour
         shouldBeUpright = true;
         player.canInput = true;
         yield break;
+    }
+
+    public IEnumerator OnFire()
+    {
+        float timeOnFire = 0f;
+        int randomStartDirection = Random.Range(0, 2);
+        Direction randomDirection;
+        if (randomStartDirection == 0)
+        {
+            randomDirection = Direction.Left;
+        }
+        else
+        {
+            randomDirection = Direction.Right;
+        }
+        float randomTurnDuration = Random.Range(0.25f, 1f);
+        float timeTurning = 0f;
+        yield return new WaitForFixedUpdate();
+        while (timeOnFire <= InputManager.FireDuration)
+        {
+            if (timeTurning <= randomTurnDuration)
+            {
+                Rotate(randomDirection, InputManager.RotationSpeed / 4f);
+                timeTurning += Time.fixedDeltaTime;
+                if (timeTurning >= randomTurnDuration)
+                {
+                    if (randomDirection == Direction.Left)
+                    {
+                        randomDirection = Direction.Right;
+                    }
+                    else
+                    {
+                        randomDirection = Direction.Left;
+                    }
+                    randomTurnDuration = Random.Range(0.25f, 1f);
+                    timeTurning = 0f;
+                }
+            }
+            timeOnFire += Time.fixedDeltaTime;
+            if (timeOnFire >= InputManager.FireDuration)
+            {
+                player.isOnFire = false;
+                player.playerRenderer.material.color = player.baseColor;
+                yield break;
+            }
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public IEnumerator MeetEyes()
+    {
+        //Quaternion facingOtherLover = Quaternion.FromToRotation(new Vector3(transform.position.x, 0f, transform.position.z), new Vector3(otherPlayer.transform.position.x, 0f, otherPlayer.transform.position.z));
+        Vector3 directionToOtherLover = (new Vector3(otherPlayer.transform.position.x, transform.position.y, otherPlayer.transform.position.z) - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(directionToOtherLover);
+        while (true)
+        {
+            //rb.MoveRotation(facingOtherLover);
+            rb.MoveRotation(lookRotation);
+            yield break;
+        }
     }
 
     private Vector3 CalculateTrajectory()

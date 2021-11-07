@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmosAreDisplayed: 1
-  rotationSpeed: 232
-  moveSpeed: 4.98
+  rotationSpeed: 360
+  moveSpeed: 10
   slopeOffset: 50
   stepOffset: 0.01
   inputRotateRight: 100
   inputRotateLeft: 97
   inputMoveForward: 32
+  fireDuration: 5
+  timeUntilEyesMeet: 5

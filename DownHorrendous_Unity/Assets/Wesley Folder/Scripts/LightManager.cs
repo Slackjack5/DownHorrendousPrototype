@@ -8,6 +8,8 @@ public class LightManager : MonoBehaviour
     public static Ambience RoomAmbience;
 
     public static LightSwitch[] lightSwitches;
+    public static Candle[] candles;
+    public static bool AllCandlesLit;
 
     public static GameObject LoveLightParent
     {
@@ -28,6 +30,7 @@ public class LightManager : MonoBehaviour
     void Start()
     {
         lightSwitches = FindObjectsOfType<LightSwitch>();
+        candles = FindObjectsOfType<Candle>();
         LoveLightParent = loveLightParent;
         NormalLightParent = normalLightParent;
         RoomAmbience = Ambience.Normal;

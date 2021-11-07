@@ -13,11 +13,6 @@ public class RotatingObject : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    //void Update()
-    //{
-    //    transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
-    //}
-
     private void FixedUpdate()
     {
         Vector3 eulerAngleVelocity = Vector3.up * rotationSpeed;

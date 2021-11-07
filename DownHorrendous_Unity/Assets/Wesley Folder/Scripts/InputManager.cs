@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class InputManager : MonoBehaviour
 {
-
-  
-  private enum InputNames { Right, Left, Forward };
-  //Declare GameManager
-  private GameObject gameManager;
+    private enum InputNames { Right, Left, Forward };
+    //Declare GameManager
+    private GameObject gameManager;
 
     private List<Player> players = new List<Player>();
 
@@ -24,6 +23,12 @@ public class InputManager : MonoBehaviour
     [Header("Display Gizmos?")]
     [SerializeField] private bool gizmosAreDisplayed;
 
+    public static float RotationSpeed
+    {
+        get => _rotationSpeed;
+        private set => _rotationSpeed = value;
+    }
+    private static float _rotationSpeed;
     [Header("Movement Tuning")]
     [SerializeField] [Range(0f, 360f)] private float rotationSpeed;
     [SerializeField] [Range(0.01f, 10f)] private float moveSpeed;
@@ -47,19 +52,45 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode inputRotateLeft;
     [SerializeField] private KeyCode inputMoveForward;
 
+    public static float FireDuration
+    {
+        get => _fireDuration;
+        private set => _fireDuration = value;
+    }
+    private static float _fireDuration;
+    [Header("Durations (in seconds)")]
+    [SerializeField] private float fireDuration;
+
+    public static float TimeUntilEyesMeet //how long with no input until the lovers turn to face each other
+    {
+        get => _timeUntilEyesMeet;
+        private set => _timeUntilEyesMeet = value;
+    }
+    private static float _timeUntilEyesMeet;
+    [SerializeField] private float timeUntilEyesMeet;
+
+    private IEnumerator noInputCoroutine;
+    private bool isInputting;
+
     void Awake()
     {
+        #region assigning static variables
         GizmosAreDisplayed = gizmosAreDisplayed;
+        RotationSpeed = rotationSpeed;
         SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
         StepOffset = stepOffset;
+        FireDuration = fireDuration;
+        TimeUntilEyesMeet = timeUntilEyesMeet;
+        #endregion
 
-      //Assign GameManager
-      gameManager = GameObject.Find("GameManager");
+        noInputCoroutine = WaitForNoInputs();
+
+        //Assign GameManager
+        gameManager = GameObject.Find("GameManager");
     }
 
     void Start()
     {
-
         Player[] playersArray = FindObjectsOfType<Player>();
         for (int i = 0; i < playersArray.Length; i++)
         {
@@ -78,40 +109,60 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-      //If the game started, turn on inputs
-      if (gameManager.GetComponent<GameManager>().gameStarted == true && GameManager.gameFinished==false)
-      {
-        #region check inputs
-        if (Input.GetKey(inputRotateRight))
+        //If the game started, turn on inputs
+        if (gameManager.GetComponent<GameManager>().gameStarted == true && GameManager.gameFinished==false)
         {
-          inputs[InputNames.Right].keyState = InputClass.KeyState.Held;
+            #region check inputs
+            if (Input.GetKey(inputRotateRight))
+            {
+                inputs[InputNames.Right].keyState = InputClass.KeyState.Held;
+            }
+            else if (Input.GetKey(inputRotateLeft))
+            {
+                inputs[InputNames.Left].keyState = InputClass.KeyState.Held;
+            }
+            if (Input.GetKey(inputMoveForward))
+            {
+                inputs[InputNames.Forward].keyState = InputClass.KeyState.Held;
+            }
+            if (Input.GetKeyUp(inputRotateRight))
+            {
+                inputs[InputNames.Right].keyState = InputClass.KeyState.Untouched;
+            }
+            if (Input.GetKeyUp(inputRotateLeft))
+            {
+                inputs[InputNames.Left].keyState = InputClass.KeyState.Untouched;
+            }
+            if (Input.GetKeyUp(inputMoveForward))
+            {
+                for (int i = 0; i < players.Count; i++)
+                {
+                    players[i].PlayerMovement.UseGravity();
+                }
+                inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
+            }
+            if (!Input.anyKey) //turn the lovers to look at each other when nothing is pressed for TimeUntilEyesMeet
+            {
+                if (isInputting)
+                {
+                    noInputCoroutine = WaitForNoInputs();
+                    StartCoroutine(noInputCoroutine);
+                }
+            }
+            else
+            {
+                if (!isInputting)
+                {
+                    StopCoroutine(noInputCoroutine);
+                    for (int i = 0; i < players.Count; i++)
+                    {
+                        StopCoroutine(players[i].PlayerMovement.meetEyesCoroutine);
+                    }
+                    isInputting = true;
+                }
+            }
+            #endregion
         }
-        else if (Input.GetKey(inputRotateLeft))
-        {
-          inputs[InputNames.Left].keyState = InputClass.KeyState.Held;
-        }
-        if (Input.GetKey(inputMoveForward))
-        {
-          inputs[InputNames.Forward].keyState = InputClass.KeyState.Held;
-        }
-        if (Input.GetKeyUp(inputRotateRight))
-        {
-          inputs[InputNames.Right].keyState = InputClass.KeyState.Untouched;
-        }
-        if (Input.GetKeyUp(inputRotateLeft))
-        {
-          inputs[InputNames.Left].keyState = InputClass.KeyState.Untouched;
-        }
-        if (Input.GetKeyUp(inputMoveForward))
-        {
-          for (int i = 0; i < players.Count; i++)
-          {
-            players[i].PlayerMovement.UseGravity();
-          }
-          inputs[InputNames.Forward].keyState = InputClass.KeyState.Untouched;
-        }
-        #endregion
-      }
     }
 
     private void FixedUpdate()
@@ -123,7 +174,7 @@ public class InputManager : MonoBehaviour
             {
                 if (players[i].canInput)
                 {
-                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Right, rotationSpeed);
+                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Right, RotationSpeed);
                 }
             }
         }
@@ -133,7 +184,7 @@ public class InputManager : MonoBehaviour
             {
                 if (players[i].canInput)
                 {
-                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Left, rotationSpeed);
+                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Left, RotationSpeed);
                 }
             }
         }
@@ -148,5 +199,17 @@ public class InputManager : MonoBehaviour
             }
         }
         #endregion
+    }
+
+    private IEnumerator WaitForNoInputs()
+    {
+        isInputting = false;
+        yield return new WaitForSeconds(TimeUntilEyesMeet);
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].PlayerMovement.meetEyesCoroutine = players[i].PlayerMovement.MeetEyes();
+            StartCoroutine(players[i].PlayerMovement.meetEyesCoroutine);
+        }
+        yield break;
     }
 }
