@@ -11,8 +11,14 @@ public class GameManager : MonoBehaviour
     private int currentTime = 3;
     private bool timerWait;
 
-    // Update is called once per frame
-    void Update()
+    public static bool JukeBox;
+    public static bool Candles;
+    public static bool Lights;
+  public bool player1;
+  public bool player2;
+
+  // Update is called once per frame
+  void Update()
     {
       //If the game hasn't started, turn on the timer to start it
       if(!gameStarted && !timerWait) { StartCoroutine(Timer()); timerWait = true; }
@@ -25,7 +31,15 @@ public class GameManager : MonoBehaviour
       if (gameStarted) { interfaceText.text = ""; }
       //Empty Text Field on Game Start
       if (gameFinished) { interfaceText.text = "Finished!"; }
+
+
+      if (Candles && JukeBox && player1 && player2 && Lights)
+      {
+      GameManager.gameFinished=true;
+      }
     }
+
+
 
     public void SubTractTime()
     {
@@ -47,4 +61,28 @@ public class GameManager : MonoBehaviour
         SubTractTime(); 
     }
 
+  private void OnTriggerEnter(Collider other)
+  {
+    if (other.gameObject.CompareTag("Player1") )
+    {
+      player1 = true;
     }
+    if (other.gameObject.CompareTag("Player2"))
+    {
+      player2 = true;
+    }
+  }
+
+  private void OnTriggerExit(Collider other)
+  {
+    if (other.gameObject.CompareTag("Player1"))
+    {
+      player1 = false;
+    }
+    if (other.gameObject.CompareTag("Player2"))
+    {
+      player2 = false;
+    }
+  }
+
+}

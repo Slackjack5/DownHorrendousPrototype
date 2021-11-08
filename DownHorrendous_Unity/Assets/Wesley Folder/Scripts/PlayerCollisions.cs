@@ -14,15 +14,22 @@ public class PlayerCollisions : MonoBehaviour
     private IEnumerator fireCoroutine;
 
     private Player player;
+    public bool player1;
+    public bool player2;
 
-    void Start()
+  void Start()
     {
         player = GetComponent<Player>();
         slipCoroutine = player.PlayerMovement.Slip();
         fireCoroutine = player.PlayerMovement.OnFire();
     }
 
-    private void OnTriggerEnter(Collider other)
+  private void Update()
+  {
+    Debug.Log(playersTouchingBedCount);
+  }
+
+  private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == CollisionManager.SlipperyLayer && player.canInput)
         {
@@ -39,6 +46,7 @@ public class PlayerCollisions : MonoBehaviour
                 {
                     LightManager.SwitchLights(LightManager.Ambience.Love);
                     isMoody = true;
+                    GameManager.Lights = true;
                 }
                 if (LightManager.RoomAmbience == LightManager.Ambience.Love)
                 {
@@ -52,7 +60,8 @@ public class PlayerCollisions : MonoBehaviour
             player.isOnFire = true;
             player.playerRenderer.material.color = Color.red;
         }
-        if (other.gameObject.GetComponent<Candle>())
+
+    if (other.gameObject.GetComponent<Candle>())
         {
             if (player.isOnFire)
             {
@@ -63,16 +72,18 @@ public class PlayerCollisions : MonoBehaviour
                 if (Array.TrueForAll(LightManager.candles, x => x.isLit))
                 {
                     LightManager.AllCandlesLit = true;
+                    GameManager.Candles = true;
                 }
             }
         }
-    }
+
+  }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love && LightManager.AllCandlesLit && jukeboxIsTouched)
+        if (collision.gameObject.CompareTag("Bed") /*&& LightManager.RoomAmbience == LightManager.Ambience.Love && LightManager.AllCandlesLit && jukeboxIsTouched*/)
         {
-            playersTouchingBedCount++;
+            //playersTouchingBedCount++;
             if (playersTouchingBedCount >= 2)
             {
                 GameManager.gameFinished = true;
@@ -99,15 +110,19 @@ public class PlayerCollisions : MonoBehaviour
         if (collision.gameObject.CompareTag("Jukebox"))
         {
             jukeboxIsTouched = true;
+            GameManager.JukeBox = true;
+            Debug.Log("JukeBoxTouched");
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
+    /*
         if (collision.gameObject.CompareTag("Bed") && LightManager.RoomAmbience == LightManager.Ambience.Love && LightManager.AllCandlesLit && jukeboxIsTouched)
         {
             playersTouchingBedCount--;
         }
+    */
         //if (collision.gameObject.CompareTag("Fire"))
         //{
         //    StopCoroutine(fireCoroutine);
@@ -139,5 +154,6 @@ public class PlayerCollisions : MonoBehaviour
             fireCoroutine = player.PlayerMovement.OnFire();
             StartCoroutine(fireCoroutine);
         }
-    }
+
+  }
 }

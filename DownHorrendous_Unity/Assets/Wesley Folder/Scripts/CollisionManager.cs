@@ -43,4 +43,5 @@ public class CollisionManager : MonoBehaviour
         GroundMask = groundMask;
         SlipperyLayer = slipperyLayer;
     }
+
 }
