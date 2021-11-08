@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_SlipSound" ID="{38960759-A4EE-4D8E-9326-333229DD013D}">
+					<ChildrenList>
+						<Action Name="" ID="{A38BC98B-683E-4A57-A61D-F0C235819F31}" ShortID="300837419">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SlipSound" ID="{179C73CF-EB21-412C-8C1F-308F816FB6BB}" WorkUnitID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_OnFire" ID="{9B875A5C-BCB6-40CB-95DF-57DEC252FCFB}">
+					<ChildrenList>
+						<Action Name="" ID="{ABF660EC-7A90-475C-99E9-1A083DC866AF}" ShortID="533051486">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnFire" ID="{9B631D67-202E-4518-8664-0AA6DF5AF5B3}" WorkUnitID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LightSwitch" ID="{6902EED4-B33C-4833-8E1A-B85106E9EB2C}">
+					<ChildrenList>
+						<Action Name="" ID="{0DD2FE99-8199-42ED-B6B3-7C7BB502A410}" ShortID="969025726">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LightSwitch" ID="{63572BE9-8E48-41A4-B0FB-19CCDAA8A3D2}" WorkUnitID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CollisionSound" ID="{201E7137-6A3C-4C9E-BE6A-E500EEE9A7CA}">
+					<ChildrenList>
+						<Action Name="" ID="{4AFF1D3A-9904-4E36-BD76-5377D8D12703}" ShortID="259751684">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CollisioSounds" ID="{CA18FA42-59D9-4810-BD18-BD2C4AECBE5A}" WorkUnitID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SetOnFire" ID="{9D190F11-3BC2-4384-AE77-42E5AFFE158A}">
+					<ChildrenList>
+						<Action Name="" ID="{3E492191-F629-4713-9E0F-F185E4F2AD99}" ShortID="638407891">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnFire" ID="{B986B0E0-51D6-49EA-A700-610852E50AE4}" WorkUnitID="{DC1BC04F-7044-4C48-96EB-72528E1C6A91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

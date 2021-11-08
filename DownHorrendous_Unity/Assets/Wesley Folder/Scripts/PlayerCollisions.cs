@@ -35,6 +35,7 @@ public class PlayerCollisions : MonoBehaviour
         {
             player.canInput = false;
             slipCoroutine = player.PlayerMovement.Slip();
+            AkSoundEngine.PostEvent("Play_SlipSound", gameObject);
             StartCoroutine(slipCoroutine);
         }
         if (other.gameObject.GetComponent<LightSwitch>())
@@ -47,7 +48,7 @@ public class PlayerCollisions : MonoBehaviour
                     LightManager.SwitchLights(LightManager.Ambience.Love);
                     isMoody = true;
                     GameManager.Lights = true;
-                }
+        }
                 if (LightManager.RoomAmbience == LightManager.Ambience.Love)
                 {
                     LightManager.SwitchLights(LightManager.Ambience.Normal);
@@ -58,6 +59,7 @@ public class PlayerCollisions : MonoBehaviour
         if (other.gameObject.CompareTag("Fire"))
         {
             player.isOnFire = true;
+            AkSoundEngine.PostEvent("Play_SetOnFire", gameObject);
             player.playerRenderer.material.color = Color.red;
         }
 
@@ -88,6 +90,12 @@ public class PlayerCollisions : MonoBehaviour
             {
                 GameManager.gameFinished = true;
             }
+        }
+
+        //Sound
+        if (collision.relativeVelocity.magnitude>5)
+        {
+            AkSoundEngine.PostEvent("Play_CollisionSound", gameObject);
         }
         //if (collision.gameObject.CompareTag("Fire"))
         //{

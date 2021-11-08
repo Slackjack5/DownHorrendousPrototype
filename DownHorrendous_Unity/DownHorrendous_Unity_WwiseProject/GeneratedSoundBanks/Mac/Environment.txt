@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	979756790	Play_LightSwitch			\Default Work Unit\Play_LightSwitch	
+	2107185511	Play_CollisionSound			\Default Work Unit\Play_CollisionSound	
+	2333351269	Play_SlipSound			\Default Work Unit\Play_SlipSound	
+	2602413465	Play_OnFire			\Default Work Unit\Play_OnFire	
+	3709116817	Play_SetOnFire			\Default Work Unit\Play_SetOnFire	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	185994890	SSMiM_Balloon_Tap11	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap11		48064
+	225794132	OnFire	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\TorchSwingFireball_ZA02.543_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\OnFire		128064
+	556800067	SSMiM_Balloon_Tap4	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap4		36064
+	605550199	SlipSound	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\Cartoon Slip _ Sound Effect_92402328.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\SlipSound		75296
+	704387569	LightSwitch	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\Light switch - SOUND EFFECT -_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\LightSwitch		1921564
+	793581598	SSMiM_Balloon_Tap23	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap23		120064
+	795694986	SSMiM_Balloon_Tap8	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap8_2F43ED55.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap8		52652
+	972701081	SSMiM_Balloon_Tap7	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap7_FB31217B.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap7		81716
+

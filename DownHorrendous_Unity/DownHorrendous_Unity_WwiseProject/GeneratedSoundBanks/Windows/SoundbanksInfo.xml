@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1229948536" Language="SFX" Hash="4188288878">
+			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
+			<ShortName>Environment</ShortName>
+			<Path>Environment.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2107185511" Name="Play_CollisionSound" ObjectPath="\Events\Default Work Unit\Play_CollisionSound" DurationType="OneShot" DurationMin="0.187500" DurationMax="0.766803">
+					<IncludedMemoryFiles>
+						<File Id="185994890" Language="SFX">
+							<ShortName>SSMiM_Balloon_Tap11.wav</ShortName>
+							<Path>SFX\SSMiM_Balloon_Tap11_10C4C929.wem</Path>
+						</File>
+						<File Id="556800067" Language="SFX">
+							<ShortName>SSMiM_Balloon_Tap4.wav</ShortName>
+							<Path>SFX\SSMiM_Balloon_Tap4_10C4C929.wem</Path>
+						</File>
+						<File Id="793581598" Language="SFX">
+							<ShortName>SSMiM_Balloon_Tap23.wav</ShortName>
+							<Path>SFX\SSMiM_Balloon_Tap23_10C4C929.wem</Path>
+						</File>
+						<File Id="795694986" Language="SFX">
+							<ShortName>SSMiM_Balloon_Tap8.wav</ShortName>
+							<Path>SFX\SSMiM_Balloon_Tap8_2F43ED55.wem</Path>
+						</File>
+						<File Id="972701081" Language="SFX">
+							<ShortName>SSMiM_Balloon_Tap7.wav</ShortName>
+							<Path>SFX\SSMiM_Balloon_Tap7_FB31217B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="979756790" Name="Play_LightSwitch" ObjectPath="\Events\Default Work Unit\Play_LightSwitch" DurationType="OneShot" DurationMin="10.007812" DurationMax="10.007812">
+					<IncludedMemoryFiles>
+						<File Id="704387569" Language="SFX">
+							<ShortName>Light switch - SOUND EFFECT -.wav</ShortName>
+							<Path>SFX\Light switch - SOUND EFFECT -_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2602413465" Name="Play_OnFire" ObjectPath="\Events\Default Work Unit\Play_OnFire" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3709116817" Name="Play_SetOnFire" ObjectPath="\Events\Default Work Unit\Play_SetOnFire" DurationType="OneShot" DurationMin="0.666667" DurationMax="0.666667">
+					<IncludedMemoryFiles>
+						<File Id="225794132" Language="SFX">
+							<ShortName>TorchSwingFireball_ZA02.543.wav</ShortName>
+							<Path>SFX\TorchSwingFireball_ZA02.543_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2333351269" Name="Play_SlipSound" ObjectPath="\Events\Default Work Unit\Play_SlipSound" DurationType="OneShot" DurationMin="0.391850" DurationMax="0.415390">
+					<IncludedMemoryFiles>
+						<File Id="605550199" Language="SFX">
+							<ShortName>Cartoon Slip _ Sound Effect.wav</ShortName>
+							<Path>SFX\Cartoon Slip _ Sound Effect_92402328.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

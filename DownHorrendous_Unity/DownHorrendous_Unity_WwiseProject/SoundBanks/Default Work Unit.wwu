@@ -4,7 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{8E5B8095-C9DA-427D-AD4C-0B8A1B494631}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="Environment" ID="{E50235B8-0CE3-4B11-A944-C7BB0E88C3AE}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_OnFire" ID="{9B875A5C-BCB6-40CB-95DF-57DEC252FCFB}" WorkUnitID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SetOnFire" ID="{9D190F11-3BC2-4384-AE77-42E5AFFE158A}" WorkUnitID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_LightSwitch" ID="{6902EED4-B33C-4833-8E1A-B85106E9EB2C}" WorkUnitID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CollisionSound" ID="{201E7137-6A3C-4C9E-BE6A-E500EEE9A7CA}" WorkUnitID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SlipSound" ID="{38960759-A4EE-4D8E-9326-333229DD013D}" WorkUnitID="{511DED04-5A2E-4126-9B07-CA7A5117E048}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
