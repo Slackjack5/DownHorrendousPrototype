@@ -9,10 +9,17 @@ EditorUserSettings:
       value: 224247031146467f02000334112d1f36191b1c2f3e67093c2966393cecef073be7e933a9ca3b36327717e1351027
       flags: 0
     RecentlyUsedScenePath-1:
+<<<<<<< DonoBranch
       value: 224247031146467f02000334112d1f36191b1c2f3e67023f23262e30e7ee3176f7e93ffdfe
+=======
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 224247031146467f02000334112d1f36191b1c2f3e67023f23262e30e7ee3115e3ee38a7f234362820
+>>>>>>> Fire Particle Effects + Sound Particle Effects + Walking Particles
       flags: 0
     RecentlyUsedScenePath-3:
-      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      value: 224247031146467102060262362c531413055700232028032e2c1336acf53a31f6fe
       flags: 0
     RecentlyUsedScenePath-4:
       value: 224247031146466b081a09305005501c12120a651c2d32351e2a183de7ae2136ebf32f
