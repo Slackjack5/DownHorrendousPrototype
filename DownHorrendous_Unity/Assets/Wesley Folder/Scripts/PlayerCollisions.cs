@@ -27,6 +27,7 @@ public class PlayerCollisions : MonoBehaviour
         if (other.gameObject.layer == CollisionManager.SlipperyLayer && player.canInput)
         {
             player.canInput = false;
+            slipCoroutine = player.PlayerMovement.Slip();
             StartCoroutine(slipCoroutine);
         }
         if (other.gameObject.GetComponent<LightSwitch>())
@@ -46,6 +47,25 @@ public class PlayerCollisions : MonoBehaviour
                 }
             }
         }
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            player.isOnFire = true;
+            player.playerRenderer.material.color = Color.red;
+        }
+        if (other.gameObject.GetComponent<Candle>())
+        {
+            if (player.isOnFire)
+            {
+                Debug.Log("penis");
+                Candle candle = other.gameObject.GetComponent<Candle>();
+                candle.LightCandle();
+                candle.isLit = true;
+                if (Array.TrueForAll(LightManager.candles, x => x.isLit))
+                {
+                    LightManager.AllCandlesLit = true;
+                }
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -58,24 +78,24 @@ public class PlayerCollisions : MonoBehaviour
                 GameManager.gameFinished = true;
             }
         }
-        if (collision.gameObject.CompareTag("Fire"))
-        {
-            player.isOnFire = true;
-            player.playerRenderer.material.color = Color.red;
-        }
-        if (collision.gameObject.GetComponentInChildren<Candle>())
-        {
-            if (player.isOnFire)
-            {
-                Candle candle = collision.gameObject.GetComponentInChildren<Candle>();
-                candle.LightCandle();
-                candle.isLit = true;
-                if(Array.TrueForAll(LightManager.candles, x => x.isLit))
-                {
-                    LightManager.AllCandlesLit = true;
-                }
-            }
-        }
+        //if (collision.gameObject.CompareTag("Fire"))
+        //{
+        //    player.isOnFire = true;
+        //    player.playerRenderer.material.color = Color.red;
+        //}
+        //if (collision.gameObject.GetComponentInChildren<Candle>())
+        //{
+        //    if (player.isOnFire)
+        //    {
+        //        Candle candle = collision.gameObject.GetComponentInChildren<Candle>();
+        //        candle.LightCandle();
+        //        candle.isLit = true;
+        //        if(Array.TrueForAll(LightManager.candles, x => x.isLit))
+        //        {
+        //            LightManager.AllCandlesLit = true;
+        //        }
+        //    }
+        //}
         if (collision.gameObject.CompareTag("Jukebox"))
         {
             jukeboxIsTouched = true;
@@ -88,30 +108,36 @@ public class PlayerCollisions : MonoBehaviour
         {
             playersTouchingBedCount--;
         }
-        if (collision.gameObject.CompareTag("Fire"))
-        {
-            StopCoroutine(fireCoroutine);
-            fireCoroutine = player.PlayerMovement.OnFire();
-            StartCoroutine(fireCoroutine);
-        }
+        //if (collision.gameObject.CompareTag("Fire"))
+        //{
+        //    StopCoroutine(fireCoroutine);
+        //    fireCoroutine = player.PlayerMovement.OnFire();
+        //    StartCoroutine(fireCoroutine);
+        //}
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.GetComponent<LightSwitch>())
         {
-          other.gameObject.GetComponent<LightSwitch>().isOn = false;
-          if (Array.TrueForAll(LightManager.lightSwitches, x => !x.isOn))
-          {
-            if (isMoody)
+            other.gameObject.GetComponent<LightSwitch>().isOn = false;
+            if (Array.TrueForAll(LightManager.lightSwitches, x => !x.isOn))
             {
-              LightManager.RoomAmbience = LightManager.Ambience.Love;
-            }
-            else
-            {
-              LightManager.RoomAmbience = LightManager.Ambience.Normal;
+                if (isMoody)
+                {
+                    LightManager.RoomAmbience = LightManager.Ambience.Love;
+                }
+                else
+                {
+                LightManager.RoomAmbience = LightManager.Ambience.Normal;
+                }
             }
         }
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            StopCoroutine(fireCoroutine);
+            fireCoroutine = player.PlayerMovement.OnFire();
+            StartCoroutine(fireCoroutine);
+        }
     }
-  }
 }
