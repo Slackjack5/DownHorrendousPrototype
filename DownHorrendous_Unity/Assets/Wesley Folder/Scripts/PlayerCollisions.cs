@@ -10,26 +10,37 @@ public class PlayerCollisions : MonoBehaviour
 
     private static bool jukeboxIsTouched;
 
+    private ScreenShake cameraShake;
+
     private IEnumerator slipCoroutine;
     private IEnumerator fireCoroutine;
+    private static IEnumerator screenShakeCoroutine;
 
     private Player player;
     public bool player1;
     public bool player2;
 
-  void Start()
+    void Start()
     {
         player = GetComponent<Player>();
         slipCoroutine = player.PlayerMovement.Slip();
         fireCoroutine = player.PlayerMovement.OnFire();
+        cameraShake = Camera.main.GetComponent<ScreenShake>();
+        screenShakeCoroutine = cameraShake.Shake();
     }
 
-  private void Update()
-  {
-    Debug.Log(playersTouchingBedCount);
-  }
+    private void Update()
+    {
+        //Debug.Log(playersTouchingBedCount);
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    StopCoroutine(screenShakeCoroutine);
+        //    screenShakeCoroutine = cameraShake.Shake();
+        //    StartCoroutine(screenShakeCoroutine);
+        //}
+    }
 
-  private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == CollisionManager.SlipperyLayer && player.canInput)
         {
@@ -67,7 +78,6 @@ public class PlayerCollisions : MonoBehaviour
         {
             if (player.isOnFire)
             {
-                Debug.Log("penis");
                 Candle candle = other.gameObject.GetComponent<Candle>();
                 candle.LightCandle();
                 candle.isLit = true;
@@ -79,7 +89,7 @@ public class PlayerCollisions : MonoBehaviour
             }
         }
 
-  }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -96,6 +106,9 @@ public class PlayerCollisions : MonoBehaviour
         if (collision.relativeVelocity.magnitude>5)
         {
             AkSoundEngine.PostEvent("Play_CollisionSound", gameObject);
+            StopCoroutine(screenShakeCoroutine);
+            screenShakeCoroutine = cameraShake.Shake();
+            StartCoroutine(screenShakeCoroutine);
         }
         //if (collision.gameObject.CompareTag("Fire"))
         //{
@@ -163,5 +176,5 @@ public class PlayerCollisions : MonoBehaviour
             StartCoroutine(fireCoroutine);
         }
 
-  }
+    }
 }

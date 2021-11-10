@@ -78,7 +78,7 @@ public class InputManager : MonoBehaviour
         GizmosAreDisplayed = gizmosAreDisplayed;
         RotationSpeed = rotationSpeed;
         SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
-        StepOffset = stepOffset;
+        StepOffset = stepOffset * 0.01f;
         FireDuration = fireDuration;
         TimeUntilEyesMeet = timeUntilEyesMeet;
         #endregion

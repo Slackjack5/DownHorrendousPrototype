@@ -148,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 bottomRayStartPosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.bounds.extents.y, transform.position.z);
         Vector3 topRayStartPosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.bounds.extents.y + InputManager.StepOffset, transform.position.z);
+        //Vector3 topRayStartPosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.bounds.extents.y + Mathf.Epsilon, transform.position.z);
         Ray bottomRay = new Ray(bottomRayStartPosition, transform.forward);
         Ray topRay = new Ray(topRayStartPosition, transform.forward);
         if (Physics.Raycast(bottomRay, out RaycastHit bottomHit, 0.01f) && Physics.Raycast(topRay, out RaycastHit topHit, Mathf.Infinity))
@@ -155,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
             if (topHit.distance > bottomHit.distance)
             {
                 float slopeAngle = Mathf.Atan2(topHit.point.y - bottomHit.point.y, topHit.distance - bottomHit.distance);
+                //Debug.Log(slopeAngle);
                 if (slopeAngle <= InputManager.SlopeOffset)
                 {
                     Quaternion rotation = Quaternion.AngleAxis(-slopeAngle, transform.right);
