@@ -6,6 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public enum Direction { Left, Right };
 
+    public bool walkParticleExists;
+    public GameObject WalkParticles
+    {
+        get => _walkParticles;
+        private set => _walkParticles = value;
+    }
+    private GameObject _walkParticles;
+
     private readonly float debugRayLength = 2f;
 
     private bool shouldBeUpright = true;
@@ -71,6 +79,11 @@ public class PlayerMovement : MonoBehaviour
     public void MoveForward(float forceMagnitude)
     {
         rb.AddForce(CalculateTrajectory() * forceMagnitude, ForceMode.Force);
+        if (!walkParticleExists)
+        {
+            WalkParticles = Instantiate(ParticleManager.WalkParticles, transform);
+            walkParticleExists = true;
+        }
     }
 
     public IEnumerator Slip()
@@ -125,6 +138,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 player.isOnFire = false;
                 player.playerRenderer.material.color = player.baseColor;
+                Destroy(player.PlayerCollisions.FireParticles);
+                player.PlayerCollisions.fireParticleExists = false;
                 yield break;
             }
             yield return new WaitForFixedUpdate();
@@ -151,23 +166,26 @@ public class PlayerMovement : MonoBehaviour
         //Vector3 topRayStartPosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.bounds.extents.y + Mathf.Epsilon, transform.position.z);
         Ray bottomRay = new Ray(bottomRayStartPosition, transform.forward);
         Ray topRay = new Ray(topRayStartPosition, transform.forward);
-        if (Physics.Raycast(bottomRay, out RaycastHit bottomHit, 0.01f) && Physics.Raycast(topRay, out RaycastHit topHit, Mathf.Infinity))
+        if (Physics.Raycast(bottomRay, out RaycastHit bottomHit, 0.1f) && Physics.Raycast(topRay, out RaycastHit topHit, Mathf.Infinity))
         {
             if (topHit.distance > bottomHit.distance)
             {
                 float slopeAngle = Mathf.Atan2(topHit.point.y - bottomHit.point.y, topHit.distance - bottomHit.distance);
                 //Debug.Log(slopeAngle);
-                if (slopeAngle <= InputManager.SlopeOffset)
-                {
-                    Quaternion rotation = Quaternion.AngleAxis(-slopeAngle, transform.right);
-                    rb.useGravity = false;
-                    return rotation * transform.forward;
-                }
-                else
-                {
-                    rb.useGravity = true;
-                    return transform.forward;
-                }
+                Quaternion rotation = Quaternion.AngleAxis(-slopeAngle, transform.right);
+                rb.useGravity = false;
+                return rotation * transform.forward;
+                //if (slopeAngle <= InputManager.SlopeOffset)
+                //{
+                //    Quaternion rotation = Quaternion.AngleAxis(-slopeAngle, transform.right);
+                //    rb.useGravity = false;
+                //    return rotation * transform.forward;
+                //}
+                //else
+                //{
+                //    rb.useGravity = true;
+                //    return transform.forward;
+                //}
             }
             else
             {

@@ -9,6 +9,15 @@ public class PlayerCollisions : MonoBehaviour
     private static int playersTouchingBedCount = 0;
 
     private static bool jukeboxIsTouched;
+    private static bool jukeboxParticleExists;
+
+    [NonSerialized] public bool fireParticleExists;
+    public GameObject FireParticles
+    {
+        get => _fireParticles;
+        private set => _fireParticles = value;
+    }
+    private GameObject _fireParticles;
 
     private ScreenShake cameraShake;
 
@@ -69,9 +78,17 @@ public class PlayerCollisions : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Fire"))
         {
-            player.isOnFire = true;
-            AkSoundEngine.PostEvent("Play_SetOnFire", gameObject);
-            player.playerRenderer.material.color = Color.red;
+            if (!player.isOnFire)
+            {
+                AkSoundEngine.PostEvent("Play_SetOnFire", gameObject);
+                player.playerRenderer.material.color = Color.red;
+                player.isOnFire = true;
+            }
+            if (!fireParticleExists)
+            {
+                FireParticles = Instantiate(ParticleManager.FireParticles, transform);
+                fireParticleExists = true;
+            }
         }
 
     if (other.gameObject.GetComponent<Candle>())
@@ -110,29 +127,19 @@ public class PlayerCollisions : MonoBehaviour
             screenShakeCoroutine = cameraShake.Shake();
             StartCoroutine(screenShakeCoroutine);
         }
-        //if (collision.gameObject.CompareTag("Fire"))
-        //{
-        //    player.isOnFire = true;
-        //    player.playerRenderer.material.color = Color.red;
-        //}
-        //if (collision.gameObject.GetComponentInChildren<Candle>())
-        //{
-        //    if (player.isOnFire)
-        //    {
-        //        Candle candle = collision.gameObject.GetComponentInChildren<Candle>();
-        //        candle.LightCandle();
-        //        candle.isLit = true;
-        //        if(Array.TrueForAll(LightManager.candles, x => x.isLit))
-        //        {
-        //            LightManager.AllCandlesLit = true;
-        //        }
-        //    }
-        //}
+
         if (collision.gameObject.CompareTag("Jukebox"))
         {
             jukeboxIsTouched = true;
             GameManager.JukeBox = true;
             Debug.Log("JukeBoxTouched");
+            GameObject jukebox = collision.gameObject;
+            if (!jukeboxParticleExists)
+            {
+                Vector3 particlePosition = new Vector3(jukebox.transform.position.x, jukebox.transform.position.y + 2f, jukebox.transform.position.z);
+                Instantiate(ParticleManager.JukeboxParticles, particlePosition, Quaternion.Euler(-90f, 0f, 0f));
+                jukeboxParticleExists = true;
+            }
         }
     }
 
@@ -144,12 +151,6 @@ public class PlayerCollisions : MonoBehaviour
             playersTouchingBedCount--;
         }
     */
-        //if (collision.gameObject.CompareTag("Fire"))
-        //{
-        //    StopCoroutine(fireCoroutine);
-        //    fireCoroutine = player.PlayerMovement.OnFire();
-        //    StartCoroutine(fireCoroutine);
-        //}
     }
 
     private void OnTriggerExit(Collider other)

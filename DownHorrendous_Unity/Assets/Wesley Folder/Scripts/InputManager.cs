@@ -78,7 +78,7 @@ public class InputManager : MonoBehaviour
         GizmosAreDisplayed = gizmosAreDisplayed;
         RotationSpeed = rotationSpeed;
         SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
-        StepOffset = stepOffset * 0.01f;
+        StepOffset = stepOffset;
         FireDuration = fireDuration;
         TimeUntilEyesMeet = timeUntilEyesMeet;
         #endregion
@@ -91,6 +91,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
+        //Debug.Log(SlopeOffset);
         Player[] playersArray = FindObjectsOfType<Player>();
         for (int i = 0; i < playersArray.Length; i++)
         {
@@ -110,7 +111,7 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         //If the game started, turn on inputs
-        if (gameManager.GetComponent<GameManager>().gameStarted == true && GameManager.gameFinished==false)
+        if (gameManager.GetComponent<GameManager>().gameStarted == true && GameManager.gameFinished == false)
         {
             #region check inputs
             if (Input.GetKey(inputRotateRight))
@@ -195,6 +196,17 @@ public class InputManager : MonoBehaviour
                 if (players[i].canInput)
                 {
                     players[i].PlayerMovement.MoveForward(moveSpeed);
+                }
+            }
+        }
+        if (inputs[InputNames.Forward].keyState == InputClass.KeyState.Untouched)
+        {
+            for (int i = 0; i < players.Count; i++)
+            {
+                if (players[i].PlayerMovement.walkParticleExists)
+                {
+                    Destroy(players[i].PlayerMovement.WalkParticles);
+                    players[i].PlayerMovement.walkParticleExists = false;
                 }
             }
         }
