@@ -81,7 +81,10 @@ public class PlayerCollisions : MonoBehaviour
             if (!player.isOnFire)
             {
                 AkSoundEngine.PostEvent("Play_SetOnFire", gameObject);
-                player.playerRenderer.material.color = Color.red;
+                foreach (Renderer renderer in player.playerRenderers)
+                {
+                    renderer.material.color = Color.red;
+                }
                 player.isOnFire = true;
             }
             if (!fireParticleExists)

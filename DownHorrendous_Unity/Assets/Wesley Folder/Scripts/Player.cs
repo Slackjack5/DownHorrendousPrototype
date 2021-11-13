@@ -22,7 +22,8 @@ public class Player : MonoBehaviour
     private PlayerMovement _playerMovement;
 
     private Rigidbody rb;
-    [System.NonSerialized] public Renderer playerRenderer;
+    //[System.NonSerialized] public Renderer playerRenderer;
+    [System.NonSerialized] public Renderer[] playerRenderers = new Renderer[3];
     [System.NonSerialized] public Color baseColor;
 
     void Awake()
@@ -30,8 +31,12 @@ public class Player : MonoBehaviour
         PlayerCollisions = gameObject.AddComponent<PlayerCollisions>();
         PlayerMovement = gameObject.AddComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
-        playerRenderer = GetComponent<Renderer>();
-        baseColor = playerRenderer.material.color;
+        playerRenderers[0] = GetComponent<Renderer>();
+        GameObject leftCheek = gameObject.transform.Find("Eye (2)").gameObject;
+        GameObject rightCheek = gameObject.transform.Find("Eye (3)").gameObject;
+        playerRenderers[1] = leftCheek.GetComponent<Renderer>();
+        playerRenderers[2] = rightCheek.GetComponent<Renderer>();
+        baseColor = playerRenderers[0].material.color;
     }
 
     void Start()

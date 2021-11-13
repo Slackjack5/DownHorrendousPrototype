@@ -137,7 +137,10 @@ public class PlayerMovement : MonoBehaviour
             if (timeOnFire >= InputManager.FireDuration)
             {
                 player.isOnFire = false;
-                player.playerRenderer.material.color = player.baseColor;
+                foreach (Renderer renderer in player.playerRenderers)
+                {
+                    renderer.material.color = player.baseColor;
+                }
                 Destroy(player.PlayerCollisions.FireParticles);
                 player.PlayerCollisions.fireParticleExists = false;
                 yield break;
