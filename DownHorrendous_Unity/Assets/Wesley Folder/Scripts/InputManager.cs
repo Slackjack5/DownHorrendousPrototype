@@ -78,7 +78,7 @@ public class InputManager : MonoBehaviour
         GizmosAreDisplayed = gizmosAreDisplayed;
         RotationSpeed = rotationSpeed;
         SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
-        StepOffset = stepOffset * 0.01f;
+        StepOffset = stepOffset;
         FireDuration = fireDuration;
         TimeUntilEyesMeet = timeUntilEyesMeet;
         #endregion
@@ -91,6 +91,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
+        //Debug.Log(SlopeOffset);
         Player[] playersArray = FindObjectsOfType<Player>();
         for (int i = 0; i < playersArray.Length; i++)
         {
