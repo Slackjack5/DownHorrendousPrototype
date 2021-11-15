@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 95805b8edac97d42ad4c0b8a1b494631
     GuidInternal: 
-    m_lastTime: -8585646521871072853
+    m_lastTime: -8585646502061924292
     List:
     - name: Environment
       guid: b83502e5e30c114ba944c7bb0e88c3ae
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 04ed1d512e5a26419b07ca7a5117e048
     GuidInternal: 
-    m_lastTime: -8585646521870823514
+    m_lastTime: -8585646502061784667
     List:
     - name: Play_CollisionSound
       guid: 37711e203c6a9e4cbe6ae500eee9a7ca
@@ -113,6 +113,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.766803
       minDuration: 0.1875
+    - name: Play_Ding
+      guid: 1c9f71dc7a4a8f47a7d7fc14c9294b7c
+      id: 2028513310
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 04ed1d512e5a26419b07ca7a5117e048
+      - ElementName: Play_Ding
+        ObjectType: 3
+        guid: 1c9f71dc7a4a8f47a7d7fc14c9294b7c
+      Path: Events\Default Work Unit\Play_Ding
+      maxAttenuation: 0
+      maxDuration: 1.072363
+      minDuration: 1.072363
     - name: Play_LightSwitch
       guid: d4ee02693cb333488e1ab85106e9eb2c
       id: 979756790
@@ -212,6 +229,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: a0912fe665cb034b875490f5438872be
       Path: Events\Default Work Unit\Set_Switch_GameActive
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music_Switch
+      guid: c0563c6ece1557499f4636270605a500
+      id: 2505149896
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 04ed1d512e5a26419b07ca7a5117e048
+      - ElementName: Stop_Music_Switch
+        ObjectType: 3
+        guid: c0563c6ece1557499f4636270605a500
+      Path: Events\Default Work Unit\Stop_Music_Switch
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

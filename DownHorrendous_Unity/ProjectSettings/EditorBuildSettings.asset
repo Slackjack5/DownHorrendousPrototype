@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Donovan Folder/DonoScene.unity
-    guid: 21e64ea0d53616643840b859ab613b36
+    path: Assets/Main Folder/Scenes/MainScene.unity
+    guid: 468d06e5c8f754045986791221e689b1
   m_configObjects: {}
