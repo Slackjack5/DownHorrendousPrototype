@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,29 +15,45 @@ public class GameManager : MonoBehaviour
     public static bool JukeBox;
     public static bool Candles;
     public static bool Lights;
-  public bool player1;
-  public bool player2;
+    public bool player1;
+    public bool player2;
 
-  // Update is called once per frame
-  void Update()
+    [SerializeField] private RawImage[] checkmarks;
+
+    // Update is called once per frame
+    void Update()
     {
-      //If the game hasn't started, turn on the timer to start it
-      if(!gameStarted && !timerWait) { StartCoroutine(Timer()); timerWait = true; }
+        //If the game hasn't started, turn on the timer to start it
+        if(!gameStarted && !timerWait) { StartCoroutine(Timer()); timerWait = true; }
 
-      //Starting timer
-      interfaceText.text = currentTime.ToString();
-      //If timer is 0 say "Go"
-      if (currentTime==0) { interfaceText.text = "Go!"; }
-      //Empty Text Field on Game Start
-      if (gameStarted) { interfaceText.text = ""; }
-      //Empty Text Field on Game Start
-      if (gameFinished) { interfaceText.text = "Finished!"; }
+        //Starting timer
+        interfaceText.text = currentTime.ToString();
+        //If timer is 0 say "Go"
+        if (currentTime==0) { interfaceText.text = "Go!"; }
+        //Empty Text Field on Game Start
+        if (gameStarted) { interfaceText.text = ""; }
+        //Empty Text Field on Game Start
+        if (gameFinished) { interfaceText.text = "Finished!"; }
 
 
-      if (Candles && JukeBox && player1 && player2 && Lights)
-      {
-      GameManager.gameFinished=true;
-      }
+        if (Candles && JukeBox && player1 && player2 && Lights)
+        {
+            GameManager.gameFinished=true;
+        }
+
+        //turn on UI checkmarks
+        if (JukeBox && !checkmarks[0].enabled)
+        {
+            checkmarks[0].enabled = true;
+        }
+        if (Candles && !checkmarks[1].enabled)
+        {
+            checkmarks[1].enabled = true;
+        }
+        if (Lights && !checkmarks[2].enabled)
+        {
+            checkmarks[2].enabled = true;
+        }
     }
 
 
@@ -57,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Timer()
     {
-    yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);
         SubTractTime(); 
     }
 
