@@ -21,7 +21,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -98,6 +98,41 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="TorchSwingFireball_ZA02_543" ID="{E2F863EC-4852-49C4-9521-4F402D03AE13}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money" ID="{689783F1-7659-4719-A055-5EAC0F234609}" ShortID="140612536">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money" ID="{088DC0D4-EE81-4C37-A2BB-93D5BC7BAC7A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.02593988095238"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.0723625"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="29508115"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money" ID="{088DC0D4-EE81-4C37-A2BB-93D5BC7BAC7A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

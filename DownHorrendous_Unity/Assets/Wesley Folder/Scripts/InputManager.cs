@@ -111,7 +111,7 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         //If the game started, turn on inputs
-        if (gameManager.GetComponent<GameManager>().gameStarted == true && GameManager.gameFinished == false)
+        if (GameManager.gameStarted == true && GameManager.gameFinished == false)
         {
             #region check inputs
             if (Input.GetKey(inputRotateRight))

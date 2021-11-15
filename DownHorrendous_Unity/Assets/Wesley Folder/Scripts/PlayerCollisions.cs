@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using EZCameraShake;
 
 public class PlayerCollisions : MonoBehaviour
 {
@@ -67,8 +68,9 @@ public class PlayerCollisions : MonoBehaviour
                 {
                     LightManager.SwitchLights(LightManager.Ambience.Love);
                     isMoody = true;
+
                     GameManager.Lights = true;
-        }
+                }
                 if (LightManager.RoomAmbience == LightManager.Ambience.Love)
                 {
                     LightManager.SwitchLights(LightManager.Ambience.Normal);
@@ -80,12 +82,13 @@ public class PlayerCollisions : MonoBehaviour
         {
             if (!player.isOnFire)
             {
-                AkSoundEngine.PostEvent("Play_SetOnFire", gameObject);
+                
                 foreach (Renderer renderer in player.playerRenderers)
                 {
                     renderer.material.color = Color.red;
                 }
                 player.isOnFire = true;
+                AkSoundEngine.PostEvent("Play_SetOnFire", gameObject);
             }
             if (!fireParticleExists)
             {
@@ -93,6 +96,7 @@ public class PlayerCollisions : MonoBehaviour
                 fireParticleExists = true;
             }
         }
+      
 
     if (other.gameObject.GetComponent<Candle>())
         {
@@ -106,6 +110,7 @@ public class PlayerCollisions : MonoBehaviour
                     LightManager.AllCandlesLit = true;
                     GameManager.Candles = true;
                 }
+
             }
         }
 
@@ -136,6 +141,7 @@ public class PlayerCollisions : MonoBehaviour
             jukeboxIsTouched = true;
             GameManager.JukeBox = true;
             Debug.Log("JukeBoxTouched");
+
             GameObject jukebox = collision.gameObject;
             if (!jukeboxParticleExists)
             {
@@ -145,6 +151,12 @@ public class PlayerCollisions : MonoBehaviour
             }
         }
     }
+
+  public void screenBump()
+  {
+    if (GameManager.gameStarted && GameManager.JukeBox) { CameraShaker.Instance.ShakeOnce(3, 0, .1f, .1f); }
+   
+  }
 
     private void OnCollisionExit(Collision collision)
     {

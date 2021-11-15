@@ -1,17 +1,31 @@
 Event	ID	Name			Wwise Object Path	Notes
+	505033097	Set_Switch_GameActive			\Default Work Unit\Set_Switch_GameActive	
 	979756790	Play_LightSwitch			\Default Work Unit\Play_LightSwitch	
+	1228139402	Play_Music_Switch			\Default Work Unit\Play_Music_Switch	
+	2028513310	Play_Ding			\Default Work Unit\Play_Ding	
 	2107185511	Play_CollisionSound			\Default Work Unit\Play_CollisionSound	
 	2333351269	Play_SlipSound			\Default Work Unit\Play_SlipSound	
+	2505149896	Stop_Music_Switch			\Default Work Unit\Stop_Music_Switch	
 	2602413465	Play_OnFire			\Default Work Unit\Play_OnFire	
 	3709116817	Play_SetOnFire			\Default Work Unit\Play_SetOnFire	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2893136410	GameStarted			\Default Work Unit\GameStarted	
+
+Switch	ID	Name	Switch Group			Notes
+	228616517	GameActive	GameStarted			
+	877805592	GameInactive	GameStarted			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	29508115	ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money_4A0673EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money		205956
 	185994890	SSMiM_Balloon_Tap11	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap11		48064
 	225794132	OnFire	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\TorchSwingFireball_ZA02.543_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\OnFire		128064
 	556800067	SSMiM_Balloon_Tap4	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap4		36064
 	605550199	SlipSound	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\Cartoon Slip _ Sound Effect_92402328.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\SlipSound		75296
 	704387569	LightSwitch	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\Light switch - SOUND EFFECT -_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoundEffects\LightSwitch		1921564
+	733408443	Nycelly-DoubleCheekedUpINTRO	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\Nycelly-DoubleCheekedUpINTRO_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music Switch\DoubleCheekedUp-Intro\Nycelly-DoubleCheekedUpINTRO\Nycelly-DoubleCheekedUpINTRO		1539556
 	793581598	SSMiM_Balloon_Tap23	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap23		120064
 	795694986	SSMiM_Balloon_Tap8	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap8_2F43ED55.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap8		52652
 	972701081	SSMiM_Balloon_Tap7	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\SSMiM_Balloon_Tap7_FB31217B.wem		\Actor-Mixer Hierarchy\Default Work Unit\CollisioSounds\SSMiM_Balloon_Tap7		81716
+	1067051101	Nycelly-DoubleCheekedUp_alp	G:\Unity School Projects\DownHorrendous\DownHorrendousPrototype\DownHorrendous_Unity\DownHorrendous_Unity_WwiseProject\.cache\Mac\SFX\Nycelly-DoubleCheekedUp.alp_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music Switch\DoubleCheekedUp-Full\Nycelly-DoubleCheekedUp\Nycelly-DoubleCheekedUp_alp		15394976
 

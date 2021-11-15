@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="4188288878">
+		<SoundBank Id="1229948536" Language="SFX" Hash="2002686024">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
@@ -40,6 +40,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2028513310" Name="Play_Ding" ObjectPath="\Events\Default Work Unit\Play_Ding" DurationType="OneShot" DurationMin="1.072363" DurationMax="1.072363">
+					<IncludedMemoryFiles>
+						<File Id="29508115" Language="SFX">
+							<ShortName>ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money.wav</ShortName>
+							<Path>SFX\ESM_Ambient_Game_Pickup_Item_Cartoon_Bell_1_Arcade_RPG_Fun_Charming_Score_Money_4A0673EE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="979756790" Name="Play_LightSwitch" ObjectPath="\Events\Default Work Unit\Play_LightSwitch" DurationType="OneShot" DurationMin="10.007812" DurationMax="10.007812">
 					<IncludedMemoryFiles>
 						<File Id="704387569" Language="SFX">
@@ -47,6 +55,30 @@
 							<Path>SFX\Light switch - SOUND EFFECT -_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1228139402" Name="Play_Music_Switch" ObjectPath="\Events\Default Work Unit\Play_Music_Switch" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="733408443" Language="SFX">
+							<ShortName>Nycelly-DoubleCheekedUpINTRO.wav</ShortName>
+							<Path>SFX\Nycelly-DoubleCheekedUpINTRO_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1067051101" Language="SFX">
+							<ShortName>Nycelly-DoubleCheekedUp.alp.wav</ShortName>
+							<Path>SFX\Nycelly-DoubleCheekedUp.alp_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{8A3523F8-4BF2-41E4-8253-085D3BCB09D0}">
+							<Media>
+								<File Id="733408443"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F2053A09-18D5-4ECB-AC54-D3E7E604EDFC}">
+							<Media>
+								<File Id="1067051101"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="2602413465" Name="Play_OnFire" ObjectPath="\Events\Default Work Unit\Play_OnFire" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3709116817" Name="Play_SetOnFire" ObjectPath="\Events\Default Work Unit\Play_SetOnFire" DurationType="OneShot" DurationMin="0.666667" DurationMax="0.666667">
@@ -65,7 +97,34 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="505033097" Name="Set_Switch_GameActive" ObjectPath="\Events\Default Work Unit\Set_Switch_GameActive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="228616517" Name="GameActive" ObjectPath="\Switches\Default Work Unit\GameStarted\GameActive"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2505149896" Name="Stop_Music_Switch" ObjectPath="\Events\Default Work Unit\Stop_Music_Switch" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="733408443" Language="SFX">
+					<ShortName>Nycelly-DoubleCheekedUpINTRO.wav</ShortName>
+					<Path>SFX\Nycelly-DoubleCheekedUpINTRO_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1067051101" Language="SFX">
+					<ShortName>Nycelly-DoubleCheekedUp.alp.wav</ShortName>
+					<Path>SFX\Nycelly-DoubleCheekedUp.alp_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<SwitchGroups>
+				<SwitchGroup Id="228616517" Name="GameActive" ObjectPath="\Switches\Default Work Unit\GameStarted\GameActive" GUID="{F2053A09-18D5-4ECB-AC54-D3E7E604EDFC}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="2893136410" Name="GameStarted" ObjectPath="\Switches\Default Work Unit\GameStarted" GUID="{F7F7749E-A660-498F-AAFD-B693AD814FF2}">
+					<Switches>
+						<Switch Id="228616517" Name="GameActive" ObjectPath="\Switches\Default Work Unit\GameStarted\GameActive" GUID="{F2053A09-18D5-4ECB-AC54-D3E7E604EDFC}"/>
+						<Switch Id="877805592" Name="GameInactive" ObjectPath="\Switches\Default Work Unit\GameStarted\GameInactive" GUID="{8A3523F8-4BF2-41E4-8253-085D3BCB09D0}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
 			<ObjectPath>Init</ObjectPath>

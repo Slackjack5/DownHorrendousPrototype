@@ -1,6 +1,318 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{009BB4E6-AB99-4C41-85D8-C39B4F500E05}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{009BB4E6-AB99-4C41-85D8-C39B4F500E05}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{009BB4E6-AB99-4C41-85D8-C39B4F500E05}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Music Switch" ID="{A77EF110-0F3D-4CB9-89B1-8A744DB20392}" ShortID="781451141">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="110"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="DoubleCheekedUp-Full" ID="{8B686D6C-46D2-4089-904B-C079E45CEBC7}" ShortID="974837344">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Nycelly-DoubleCheekedUp" ID="{A132207F-D76E-45C6-B89A-8AF39A189ED6}" ShortID="161430419">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="87272.7437641723"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Nycelly-DoubleCheekedUp_alp" ID="{BDB978C2-CD52-4338-A1BF-87205A5FA339}" ShortID="686059888">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Nycelly-DoubleCheekedUp_alp" ID="{F2C1DBB3-FC91-45CE-94F8-691994014B15}">
+													<Language>SFX</Language>
+													<AudioFile>Nycelly-DoubleCheekedUp.alp.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1067051101"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C5764B6E-33FA-48AA-901B-2662C6772B58}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F9D29464-5B6A-4354-9130-4A3F48C4F15B}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Nycelly-DoubleCheekedUp_alp" ID="{7BE2B79E-D8A5-4FAF-BB64-AC2F3F0BD973}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="87272.7437641723"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Nycelly-DoubleCheekedUp_alp" ID="{F2C1DBB3-FC91-45CE-94F8-691994014B15}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{78333FFE-F102-4781-A28C-24342C5DD3E6}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{65566488-5726-4A17-9A2C-2A62CC42CD4E}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="87272.7437641723"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{B7CFC99D-DE7E-4730-9DC1-67A0BB238D12}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{98882D03-1471-4AD8-A01B-8AE31221DA31}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{BEA2B353-2154-4D21-9EA4-C2B444396C03}" ShortID="797605755">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{9D906DD4-49EA-4D22-8CA2-BD659D28FEA6}" ShortID="1038959224">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="999"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Nycelly-DoubleCheekedUp" ID="{A132207F-D76E-45C6-B89A-8AF39A189ED6}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="DoubleCheekedUp-Intro" ID="{6004B06C-E5ED-4386-A97D-9352BD8CBDB6}" ShortID="646265718">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Nycelly-DoubleCheekedUpINTRO" ID="{DFB78F55-3D2C-48BF-AA1D-2BDBBBD61C57}" ShortID="710357852">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="8727.27891156463"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{596CA98C-9BBF-4ABB-A22C-08E956A85FE6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Nycelly-DoubleCheekedUpINTRO" ID="{64A5AB4F-8A09-4E84-AB60-2783F22D3F55}" ShortID="680504434">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EFCFC89B-7391-4627-ABDE-7C2969AEC851}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Nycelly-DoubleCheekedUpINTRO" ID="{777A74DC-498E-4DA6-A278-7CF58D3E51E1}">
+													<Language>SFX</Language>
+													<AudioFile>Nycelly-DoubleCheekedUpINTRO.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="733408443"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{90C6AD54-08FD-44D1-9677-4B3728E1BB40}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{101859E2-252A-4BC6-ADBE-3AD845C47D2C}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Nycelly-DoubleCheekedUpINTRO" ID="{6B05353C-C735-470D-9799-630A3E553446}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="8727.27891156463"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Nycelly-DoubleCheekedUpINTRO" ID="{777A74DC-498E-4DA6-A278-7CF58D3E51E1}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{211528CD-D8FB-4745-A28E-60ADA5C555BD}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{674426DF-B016-436B-8E25-88B162F50BCF}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="8727.27891156463"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{259E7E50-D49F-4B29-9269-AC06D341E525}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{5F23E921-8458-4C16-889B-85612898E50B}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{144D360C-43F6-4A30-9E90-0C9C1E378CA2}" ShortID="355068719">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{30641E0C-F628-44A7-8DE7-5C36B02DE07F}" ShortID="604591926">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="999"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Nycelly-DoubleCheekedUpINTRO" ID="{DFB78F55-3D2C-48BF-AA1D-2BDBBBD61C57}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{10816C55-0C1E-4C7A-A0A2-A9036A2CA6F7}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{0597203F-009F-4663-AE4C-310C73C931C0}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<ArgumentList>
+						<ArgumentRef Name="GameStarted" ID="{F7F7749E-A660-498F-AAFD-B693AD814FF2}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="GameInactive" ID="{8A3523F8-4BF2-41E4-8253-085D3BCB09D0}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="DoubleCheekedUp-Intro" ID="{6004B06C-E5ED-4386-A97D-9352BD8CBDB6}" WorkUnitID="{009BB4E6-AB99-4C41-85D8-C39B4F500E05}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="GameActive" ID="{F2053A09-18D5-4ECB-AC54-D3E7E604EDFC}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="DoubleCheekedUp-Full" ID="{8B686D6C-46D2-4089-904B-C079E45CEBC7}" WorkUnitID="{009BB4E6-AB99-4C41-85D8-C39B4F500E05}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="GameStarted" ID="{F7F7749E-A660-498F-AAFD-B693AD814FF2}"/>
+							</Path>
+							<AudioNodeInfo>
+								<NoObject Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
