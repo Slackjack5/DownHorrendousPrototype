@@ -13,12 +13,7 @@ public class PlayerCollisions : MonoBehaviour
     private static bool jukeboxParticleExists;
 
     [NonSerialized] public bool fireParticleExists;
-    public GameObject FireParticles
-    {
-        get => _fireParticles;
-        private set => _fireParticles = value;
-    }
-    private GameObject _fireParticles;
+    public GameObject FireParticles { get; private set; }
 
     private ScreenShake cameraShake;
 
@@ -26,13 +21,13 @@ public class PlayerCollisions : MonoBehaviour
     private IEnumerator fireCoroutine;
     private static IEnumerator screenShakeCoroutine;
 
-    private Player player;
+    private Lover player;
     public bool player1;
     public bool player2;
 
     void Start()
     {
-        player = GetComponent<Player>();
+        player = GetComponent<Lover>();
         slipCoroutine = player.PlayerMovement.Slip();
         fireCoroutine = player.PlayerMovement.OnFire();
         cameraShake = Camera.main.GetComponent<ScreenShake>();
@@ -140,7 +135,7 @@ public class PlayerCollisions : MonoBehaviour
         {
             jukeboxIsTouched = true;
             GameManager.JukeBox = true;
-            Debug.Log("JukeBoxTouched");
+            //Debug.Log("JukeBoxTouched");
 
             GameObject jukebox = collision.gameObject;
             if (!jukeboxParticleExists)

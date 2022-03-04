@@ -11,20 +11,10 @@ public class LightManager : MonoBehaviour
     public static Candle[] candles;
     public static bool AllCandlesLit;
 
-    public static GameObject LoveLightParent
-    {
-        get => _loveLightParent;
-        private set => _loveLightParent = value;
-    }
-    private static GameObject _loveLightParent;
+    public static GameObject LoveLightParent { get; private set; }
     [SerializeField] private GameObject loveLightParent;
 
-    public static GameObject NormalLightParent
-    {
-        get => _normalLightParent;
-        private set => _normalLightParent = value;
-    }
-    private static GameObject _normalLightParent;
+    public static GameObject NormalLightParent { get; private set; }
     [SerializeField] private GameObject normalLightParent;
 
     void Start()

@@ -4,36 +4,16 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
-    public static float SlipHeight
-    {
-        get => _slipHeight;
-        private set => _slipHeight = value;
-    }
-    private static float _slipHeight;
+    public static float SlipHeight { get; private set; }
     [SerializeField] [Range(1f, 10f)] private float slipHeight;
 
-    public static float SlipTorqueMagnitude
-    {
-        get => _slipTorqueMagnitude;
-        private set => _slipTorqueMagnitude = value;
-    }
-    private static float _slipTorqueMagnitude;
+    public static float SlipTorqueMagnitude { get; private set; }
     [SerializeField] [Range(1f, 10f)] private float slipTorqueMagnitude;
 
-    public static LayerMask GroundMask
-    {
-        get => _groundMask;
-        private set => _groundMask = value;
-    }
-    private static LayerMask _groundMask;
+    public static LayerMask GroundMask { get; private set; }
     [SerializeField] private LayerMask groundMask;
 
-    public static int SlipperyLayer
-    {
-        get => _slipperyLayer;
-        private set => _slipperyLayer = value;
-    }
-    private static int _slipperyLayer;
+    public static int SlipperyLayer { get; private set; }
     [SerializeField] private int slipperyLayer;
 
     void Awake()

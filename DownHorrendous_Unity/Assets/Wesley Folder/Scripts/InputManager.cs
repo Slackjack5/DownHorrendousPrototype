@@ -9,42 +9,22 @@ public class InputManager : MonoBehaviour
     //Declare GameManager
     private GameObject gameManager;
 
-    private List<Player> players = new List<Player>();
+    private List<Lover> players = new List<Lover>();
 
-    public static bool GizmosAreDisplayed
-    {
-        get => _gizmosAreDisplayed;
-        private set => _gizmosAreDisplayed = value;
-    }
-    private static bool _gizmosAreDisplayed;
+    public static bool GizmosAreDisplayed { get; private set; }
 
     private Dictionary<InputNames, InputClass> inputs = new Dictionary<InputNames, InputClass>();
 
     [Header("Display Gizmos?")]
     [SerializeField] private bool gizmosAreDisplayed;
 
-    public static float RotationSpeed
-    {
-        get => _rotationSpeed;
-        private set => _rotationSpeed = value;
-    }
-    private static float _rotationSpeed;
+    public static float RotationSpeed { get; private set; }
     [Header("Movement Tuning")]
     [SerializeField] [Range(0f, 360f)] private float rotationSpeed;
     [SerializeField] [Range(0.01f, 10f)] private float moveSpeed;
-    public static float SlopeOffset
-    {
-        get => _slopeOffset;
-        private set => _slopeOffset = value;
-    }
-    private static float _slopeOffset;
+    public static float SlopeOffset { get; private set; }
     [SerializeField] [Range(0f, 89.9f)] private float slopeOffset;
-    public static float StepOffset
-    {
-        get => _stepOffset;
-        private set => _stepOffset = value;
-    }
-    private static float _stepOffset;
+    public static float StepOffset { get; private set; }
     [SerializeField] [Range(0.01f, 1f)] private float stepOffset;
 
     [Header("Controls")]
@@ -52,21 +32,11 @@ public class InputManager : MonoBehaviour
     [SerializeField] private KeyCode inputRotateLeft;
     [SerializeField] private KeyCode inputMoveForward;
 
-    public static float FireDuration
-    {
-        get => _fireDuration;
-        private set => _fireDuration = value;
-    }
-    private static float _fireDuration;
+    public static float FireDuration { get; private set; }
     [Header("Durations (in seconds)")]
     [SerializeField] private float fireDuration;
 
-    public static float TimeUntilEyesMeet //how long with no input until the lovers turn to face each other
-    {
-        get => _timeUntilEyesMeet;
-        private set => _timeUntilEyesMeet = value;
-    }
-    private static float _timeUntilEyesMeet;
+    public static float TimeUntilEyesMeet { get; private set; } //how long with no input until the lovers turn to face each other
     [SerializeField] private float timeUntilEyesMeet;
 
     private IEnumerator noInputCoroutine;
@@ -92,7 +62,7 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         //Debug.Log(SlopeOffset);
-        Player[] playersArray = FindObjectsOfType<Player>();
+        Lover[] playersArray = FindObjectsOfType<Lover>();
         for (int i = 0; i < playersArray.Length; i++)
         {
             players.Add(playersArray[i]);

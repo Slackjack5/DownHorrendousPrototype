@@ -7,12 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public enum Direction { Left, Right };
 
     public bool walkParticleExists;
-    public GameObject WalkParticles
-    {
-        get => _walkParticles;
-        private set => _walkParticles = value;
-    }
-    private GameObject _walkParticles;
+    public GameObject WalkParticles { get; private set; }
 
     private readonly float debugRayLength = 2f;
 
@@ -22,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator meetEyesCoroutine;
 
-    private Player player;
-    private Player otherPlayer;
+    private Lover player;
+    private Lover otherPlayer;
 
     private Rigidbody rb;
     private CapsuleCollider capsuleCollider;
@@ -31,9 +26,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         meetEyesCoroutine = MeetEyes();
-        player = GetComponent<Player>();
-        Player[] playersArray = FindObjectsOfType<Player>();
-        foreach (Player playerIndex in playersArray)
+        player = GetComponent<Lover>();
+        Lover[] playersArray = FindObjectsOfType<Lover>();
+        foreach (Lover playerIndex in playersArray)
         {
             if (playerIndex.gameObject != gameObject)
             {

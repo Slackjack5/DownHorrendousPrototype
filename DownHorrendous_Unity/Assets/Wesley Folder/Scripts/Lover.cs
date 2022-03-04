@@ -2,24 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Lover : MonoBehaviour
 {
     [System.NonSerialized] public bool canInput;
     [System.NonSerialized] public bool isOnFire;
 
-    public PlayerCollisions PlayerCollisions
-    {
-        get => _playerCollisions;
-        private set => _playerCollisions = value;
-    }
-    private PlayerCollisions _playerCollisions;
+    public PlayerCollisions PlayerCollisions { get; private set; }
 
-    public PlayerMovement PlayerMovement
-    {
-        get => _playerMovement;
-        private set => _playerMovement = value;
-    }
-    private PlayerMovement _playerMovement;
+    public PlayerMovement PlayerMovement { get; private set; }
 
     private Rigidbody rb;
     //[System.NonSerialized] public Renderer playerRenderer;
@@ -37,6 +27,8 @@ public class Player : MonoBehaviour
         playerRenderers[1] = leftCheek.GetComponent<Renderer>();
         playerRenderers[2] = rightCheek.GetComponent<Renderer>();
         baseColor = playerRenderers[0].material.color;
+
+        Services.lovers.Add(this);
     }
 
     void Start()
