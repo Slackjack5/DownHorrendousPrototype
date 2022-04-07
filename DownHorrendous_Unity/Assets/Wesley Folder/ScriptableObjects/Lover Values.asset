@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bd5333f995449528091a63797ba829, type: 3}
   m_Name: Lover Values
   m_EditorClassIdentifier: 
-  _rotationSpeed: 0.01
-  _moveSpeed: 0.01
-  _slopeOffset: 0
+  _rotationSpeed: 360
+  _moveSpeed: 10
+  _slopeOffset: 45
   _stepOffset: 0.01
+  penis: 0

@@ -5,6 +5,8 @@ using System;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private LoverValuesScriptableObject _loverValues;
+
     private enum InputNames { Right, Left, Forward };
     //Declare GameManager
     private GameObject gameManager;
@@ -17,15 +19,6 @@ public class InputManager : MonoBehaviour
 
     [Header("Display Gizmos?")]
     [SerializeField] private bool gizmosAreDisplayed;
-
-    public static float RotationSpeed { get; private set; }
-    [Header("Movement Tuning")]
-    [SerializeField] [Range(0f, 360f)] private float rotationSpeed;
-    [SerializeField] [Range(0.01f, 10f)] private float moveSpeed;
-    public static float SlopeOffset { get; private set; }
-    [SerializeField] [Range(0f, 89.9f)] private float slopeOffset;
-    public static float StepOffset { get; private set; }
-    [SerializeField] [Range(0.01f, 1f)] private float stepOffset;
 
     [Header("Controls")]
     [SerializeField] private KeyCode inputRotateRight;
@@ -46,9 +39,6 @@ public class InputManager : MonoBehaviour
     {
         #region assigning static variables
         GizmosAreDisplayed = gizmosAreDisplayed;
-        RotationSpeed = rotationSpeed;
-        SlopeOffset = Mathf.Deg2Rad * slopeOffset * 0.1f;
-        StepOffset = stepOffset;
         FireDuration = fireDuration;
         TimeUntilEyesMeet = timeUntilEyesMeet;
         #endregion
@@ -145,7 +135,7 @@ public class InputManager : MonoBehaviour
             {
                 if (players[i].canInput)
                 {
-                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Right, RotationSpeed);
+                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Right, _loverValues.RotationSpeed);
                 }
             }
         }
@@ -155,7 +145,7 @@ public class InputManager : MonoBehaviour
             {
                 if (players[i].canInput)
                 {
-                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Left, RotationSpeed);
+                    players[i].PlayerMovement.Rotate(PlayerMovement.Direction.Left, _loverValues.RotationSpeed);
                 }
             }
         }
@@ -165,7 +155,7 @@ public class InputManager : MonoBehaviour
             {
                 if (players[i].canInput)
                 {
-                    players[i].PlayerMovement.MoveForward(moveSpeed);
+                    players[i].PlayerMovement.MoveForward(_loverValues.MoveSpeed);
                 }
             }
         }

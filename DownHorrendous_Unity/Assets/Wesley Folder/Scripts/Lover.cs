@@ -7,6 +7,13 @@ public class Lover : MonoBehaviour
     [System.NonSerialized] public bool canInput;
     [System.NonSerialized] public bool isOnFire;
 
+    public LoverValuesScriptableObject LoverValues
+    {
+        get => _loverValues;
+        private set => _loverValues = value;
+    }
+    [SerializeField] private LoverValuesScriptableObject _loverValues;
+
     public PlayerCollisions PlayerCollisions { get; private set; }
 
     public PlayerMovement PlayerMovement { get; private set; }

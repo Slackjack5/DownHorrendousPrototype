@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54e98596b605423e952c13385d9bd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loverValues: {fileID: 11400000, guid: c0f6f8d87ed494538bf229f959d863d7, type: 2}
   gizmosAreDisplayed: 1
   rotationSpeed: 360
   moveSpeed: 10

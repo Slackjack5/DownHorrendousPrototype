@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7559475937164355199}
   - component: {fileID: 7559475937164355195}
   - component: {fileID: 7559475937164355194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,3 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdfa819ddb6e146b49f63e0598d7de8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loverValues: {fileID: 11400000, guid: c0f6f8d87ed494538bf229f959d863d7, type: 2}
+  _loverLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295

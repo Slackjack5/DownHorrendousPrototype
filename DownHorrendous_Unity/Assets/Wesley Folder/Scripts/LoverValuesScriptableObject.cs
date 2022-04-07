@@ -11,6 +11,8 @@ public class LoverValuesScriptableObject : ScriptableObject
     [SerializeField] [Range(0f, 89.9f)] private float _slopeOffset;
     [SerializeField] [Range(0.01f, 89.9f)] private float _stepOffset;
 
+    public bool penis;
+
     #region Properties
     public float RotationSpeed
     {
@@ -24,8 +26,8 @@ public class LoverValuesScriptableObject : ScriptableObject
     }
     public float SlopeOffset
     {
-        get => _moveSpeed;
-        private set => _moveSpeed = value;
+        get => _slopeOffset * Mathf.Deg2Rad;
+        private set => _slopeOffset = value;
     }
     public float StepOffset
     {
