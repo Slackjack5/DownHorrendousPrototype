@@ -6,12 +6,12 @@ using UnityEngine;
 public class LoverValuesScriptableObject : ScriptableObject
 {
     [Header("Movement Values")]
+    [Tooltip("How quickly a lover rotates.")]
     [SerializeField] [Range(0.01f, 360f)] private float _rotationSpeed;
+    [Tooltip("How quickly a lover moves.")]
     [SerializeField] [Range(0.01f, 10f)] private float _moveSpeed;
+    [Tooltip("The maximum angle (degrees) a lover can climb.")]
     [SerializeField] [Range(0f, 89.9f)] private float _slopeOffset;
-    [SerializeField] [Range(0.01f, 89.9f)] private float _stepOffset;
-
-    public bool penis;
 
     #region Properties
     public float RotationSpeed
@@ -28,11 +28,6 @@ public class LoverValuesScriptableObject : ScriptableObject
     {
         get => _slopeOffset * Mathf.Deg2Rad;
         private set => _slopeOffset = value;
-    }
-    public float StepOffset
-    {
-        get => _stepOffset;
-        private set => _stepOffset = value;
     }
     #endregion
 }

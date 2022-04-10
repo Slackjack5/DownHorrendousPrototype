@@ -44,15 +44,14 @@ public class LevelManager : MonoBehaviour
         if (_activeObjectives.Count > 0)
         {
             CheckObjectives(_activeObjectives);
-            /* UNUSED: see ObjectivesInRangeOfLovers function at bottom.
-            List<Objective> objectivesInRangeOfLovers = ObjectivesInRangeOfLovers(Services.lovers);
-            if (objectivesInRangeOfLovers?.Count > 0)
-            {
-                CheckObjectives(objectivesInRangeOfLovers);
-            }
-            */
         }
         #endregion
+    }
+
+    private IEnumerator CountdownTimer()
+    {
+
+        yield break;
     }
 
     /// <summary>
@@ -98,6 +97,11 @@ public class LevelManager : MonoBehaviour
     private void OnObjectiveCompletion(Objective objective)
     {
         Debug.Log(objective.Name + " completed.");
+        //the final element of _level.Objectives is the one required to finish the level
+        if (objective == _level.Objectives[_level.Objectives.Length - 1])
+        {
+            Services.levelEventManager.winLevel.Invoke();
+        }
         if (objective.IsCompletionImmutable)
         {
             //clean up objective if it doesn't need to be checked anymore
@@ -126,37 +130,4 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
-
-    /* UNUSED: way of only checking nearby objectives. Not used because:
-     * A. only checks in range of lovers, so would fail if objective is not near lovers (i.e. shoot a ball into the net).
-     * B. LoverRangeDistance would have to be big enough to account for all sizes of colliders, since transform.position is used to determine positions.
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="lovers">Lovers to check which objectives are in range of.</param>
-    /// <returns>All active objectives that are within range of the given lovers.</returns>
-    private List<Objective> ObjectivesInRangeOfLovers(List<Lover> lovers)
-    {
-        List<Objective> objectivesInRangeOfLovers = new List<Objective>();
-        foreach (Lover lover in lovers)
-        {
-            foreach (Objective objective in _activeObjectives)
-            {
-                if (objectivesInRangeOfLovers.Contains(objective))
-                {
-                    continue;
-                }
-                foreach (Vector3 objectivePosition in objective.Positions)
-                {
-                    if(Vector3.Distance(lover.transform.position, objectivePosition) < Constants.LoverRangeDistance)
-                    {
-                        objectivesInRangeOfLovers.Add(objective);
-                        continue;
-                    }
-                }
-            }
-        }
-        return objectivesInRangeOfLovers;
-    }
-    */
 }
